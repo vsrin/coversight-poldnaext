@@ -321,3 +321,182 @@ class Prompts:
         
         Return only the JSON array with no additional text.
         """
+    
+    # Add these methods to the Prompts class in config/prompts.py
+
+    @staticmethod
+    def intent_analysis_prompt(element_text: str, element_type: str, element_subtype: str) -> str:
+        """
+        Generate a prompt for intent analysis.
+        
+        Args:
+            element_text: The text of the element
+            element_type: The type of the element
+            element_subtype: The subtype of the element
+            
+        Returns:
+            A formatted prompt string
+        """
+        return f"""
+        # Insurance Policy Intent Analysis
+        
+        ## Your Task
+        Analyze the insurance policy element below and determine its precise coverage intent - what it means to cover or exclude, under what circumstances, and with what limitations.
+        
+        ## Element Information
+        Text: ```
+        {element_text}
+        ```
+        
+        Type: {element_type}
+        Subtype: {element_subtype}
+        
+        ## Expected Output Format
+        Provide your analysis as a JSON object:
+        ```json
+        {{
+          "intent_summary": "Brief plain language summary of what this element means",
+          "coverage_effect": "GRANTS_COVERAGE/LIMITS_COVERAGE/EXCLUDES_COVERAGE/MODIFIES_COVERAGE/DEFINES_TERM/IMPOSES_OBLIGATION",
+          "intent_details": {{
+            "what_is_covered": "Specific subject of coverage (if applicable)",
+            "trigger_events": ["Event 1", "Event 2"],
+            "temporal_conditions": "Time-related conditions that apply",
+            "spatial_conditions": "Location-related conditions that apply",
+            "actor_obligations": "What any party must do for this to apply"
+          }},
+          "intent_confidence": 0.85
+        }}
+        ```
+        
+        ## Guidelines
+        - Focus on what the element actually means in practical terms, not just its technical classification
+        - Consider the impact on coverage in real-world situations
+        - Identify what would trigger this element to apply
+        - Note any conditions that must be met for this element to apply
+        - If this is a coverage grant, specify what is being covered
+        - If this is an exclusion, specify what is being excluded and under what circumstances
+        - For definitions, explain how the definition impacts coverage interpretation
+        
+        Return only the JSON object with no additional text.
+        """
+
+    @staticmethod
+    def conditional_analysis_prompt(element_text: str, element_type: str) -> str:
+        """
+        Generate a prompt for conditional language analysis.
+        
+        Args:
+            element_text: The text of the element
+            element_type: The type of the element
+            
+        Returns:
+            A formatted prompt string
+        """
+        return f"""
+        # Insurance Policy Conditional Language Analysis
+        
+        ## Your Task
+        Analyze the insurance policy element below and identify all conditional language that modifies coverage, including requirements, limitations, and triggers.
+        
+        ## Element Information
+        Text: ```
+        {element_text}
+        ```
+        
+        Type: {element_type}
+        
+        ## Expected Output Format
+        Provide your analysis as a JSON object:
+        ```json
+        {{
+          "conditions": [
+            {{
+              "condition_text": "Full text of the condition",
+              "condition_type": "PREREQUISITE/LIMITATION/EXCLUSIONARY/REPORTING/TIMING/GEOGRAPHICAL",
+              "effect": "How this condition modifies coverage",
+              "applies_to": "What the condition applies to",
+              "consequence": "What happens if condition is/isn't met"
+            }}
+          ],
+          "has_complex_conditions": true/false,
+          "condition_count": 2,
+          "confidence": 0.95
+        }}
+        ```
+        
+        ## Condition Types
+        - PREREQUISITE: Must be met for coverage to apply
+        - LIMITATION: Restricts the scope of coverage
+        - EXCLUSIONARY: Removes certain scenarios from coverage
+        - REPORTING: Requirements for reporting claims or incidents
+        - TIMING: Time-based conditions
+        - GEOGRAPHICAL: Location-based conditions
+        
+        ## Guidelines
+        - Extract the exact text of each condition
+        - Determine how each condition affects coverage
+        - Consider both explicit and implicit conditions
+        - Identify requirements that must be satisfied
+        - Note consequences of meeting or failing to meet conditions
+        - Count and categorize all conditions found
+        
+        Return only the JSON object with no additional text.
+        """
+
+    @staticmethod
+    def term_extraction_prompt(element_text: str, element_type: str) -> str:
+        """
+        Generate a prompt for term extraction.
+        
+        Args:
+            element_text: The text of the element
+            element_type: The type of the element
+            
+        Returns:
+            A formatted prompt string
+        """
+        return f"""
+        # Insurance Policy Term Extraction
+        
+        ## Your Task
+        Analyze the insurance policy element below and extract specific terms, conditions, triggers, and other critical language components that affect the interpretation and application of coverage.
+        
+        ## Element Information
+        Text: ```
+        {element_text}
+        ```
+        
+        Type: {element_type}
+        
+        ## Expected Output Format
+        Provide your analysis as a JSON object:
+        ```json
+        {{
+          "extracted_terms": [
+            {{
+              "term": "The specific term or phrase",
+              "term_type": "DEFINED_TERM/TRIGGER/CONDITION/REQUIREMENT/LIMITATION/MONETARY_VALUE/TIME_PERIOD/LOCATION",
+              "context": "How this term is used in the element",
+              "significance": "How this term affects coverage or interpretation"
+            }}
+          ],
+          "defined_terms": ["term1", "term2"],
+          "temporal_terms": ["term1", "term2"],
+          "monetary_terms": ["term1", "term2"],
+          "logical_operators": ["and", "or", "not"],
+          "confidence": 0.9
+        }}
+        ```
+        
+        ## Guidelines
+        - Identify defined terms (typically in quotes or otherwise highlighted)
+        - Extract triggers that activate or deactivate coverage
+        - Note conditions that must be satisfied
+        - Identify requirements imposed on parties
+        - Extract monetary values and their context
+        - Note time periods and deadlines
+        - Identify locations or territories mentioned
+        - Extract logical operators that affect interpretation
+        
+        Return only the JSON object with no additional text.
+        """

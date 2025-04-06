@@ -1,11 +1,11 @@
 {
-  "document_id": "eb7cd626-aff9-4396-ab02-5e16b7e69e86",
-  "created_at": "2025-04-05T22:22:29.896403",
+  "document_id": "ef9f72dc-cc02-4395-bd5e-b223c488deb2",
+  "created_at": "2025-04-06T09:07:48.314312",
   "metadata": {
     "file_path": "/var/folders/nt/w87w0m9d7tv5nt1yyp2cbc0r0000gn/T/sample_policy.docx",
     "file_type": "docx",
     "total_pages": 0,
-    "extraction_date": "2025-04-05T22:22:29.896352",
+    "extraction_date": "2025-04-06T09:07:48.314265",
     "title": "",
     "author": "python-docx",
     "subject": "",
@@ -19,9 +19,7 @@
       "level": 1,
       "text": "Policy Number: TEST-12345\nNamed Insured: ABC Corporation\nPolicy Period: 01/01/2025 to 01/01/2026\nLimits of Insurance: $1,000,000 Each Occurrence",
       "parent_id": null,
-      "formatting_cues": [
-        "colon_delimited_list"
-      ],
+      "formatting_cues": [],
       "cross_references": [],
       "classification": {
         "classification": "DECLARATIONS",
@@ -36,14 +34,8 @@
       "level": 1,
       "text": "This endorsement modifies insurance provided under the following:\nCOMMERCIAL GENERAL LIABILITY COVERAGE PART\n\nSCHEDULE\nName of Additional Insured Person(s) Or Organization(s):\nXYZ Partner Company\n\nSection II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
       "parent_id": null,
-      "formatting_cues": [
-        "bold_text",
-        "section_title",
-        "colon_delimited_list"
-      ],
-      "cross_references": [
-        "Section II \u2013 Who Is An Insured"
-      ],
+      "formatting_cues": [],
+      "cross_references": [],
       "classification": {
         "classification": "ENDORSEMENT",
         "confidence": 0.9,
@@ -55,16 +47,10 @@
       "id": "section_i",
       "title": "SECTION I - INSURING AGREEMENT",
       "level": 1,
-      "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of \"bodily injury\" or \"property damage\" to which this insurance applies. We will have the right and duty to defend the insured against any \"suit\" seeking those damages. However, we will have no duty to defend the insured against any \"suit\" seeking damages for \"bodily injury\" or \"property damage\" to which this insurance does not apply. The amount we will pay for damages is limited as described in Section III - Limits Of Insurance. This insurance applies to \"bodily injury\" and \"property damage\" only if: (1) The \"bodily injury\" or \"property damage\" is caused by an \"occurrence\" that takes place in the \"coverage territory\"; (2) The \"bodily injury\" or \"property damage\" occurs during the policy period; and (3) Prior to the policy period, no insured listed under Paragraph 1. of Section II \u2013 Who Is An Insured and no employee authorized by you to give or receive notice of an \"occurrence\" or claim, knew that the \"bodily injury\" or \"property damage\" had occurred, in whole or in part.",
+      "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of \"bodily injury\" or \"property damage\" to which this insurance applies. We will have the right and duty to defend the insured against any \"suit\" seeking those damages. However, we will have no duty to defend the insured against any \"suit\" seeking damages for \"bodily injury\" or \"property damage\" to which this insurance does not apply.",
       "parent_id": null,
-      "formatting_cues": [
-        "quoted_text",
-        "cross_reference"
-      ],
-      "cross_references": [
-        "Section III - Limits Of Insurance",
-        "Section II \u2013 Who Is An Insured"
-      ],
+      "formatting_cues": [],
+      "cross_references": [],
       "classification": {
         "classification": "INSURING_AGREEMENT",
         "confidence": 0.9,
@@ -76,11 +62,10 @@
       "id": "section_ii",
       "title": "SECTION II - EXCLUSIONS",
       "level": 1,
-      "text": "This insurance does not apply to:\n1. Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.\n2. Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.\n3. Liquor Liability\n\"Bodily injury\" or \"property damage\" for which any insured may be held liable by reason of:\n(a) Causing or contributing to the intoxication of any person;\n(b) The furnishing of alcoholic beverages to a person under the legal drinking age or under the influence of alcohol; or\n(c) Any statute, ordinance or regulation relating to the sale, gift, distribution or use of alcoholic beverages.",
+      "text": "This insurance does not apply to:\n1. Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.\n2. Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
       "parent_id": null,
       "formatting_cues": [
-        "bullet_list",
-        "quoted_text"
+        "bullet_list"
       ],
       "cross_references": [],
       "classification": {
@@ -94,11 +79,10 @@
       "id": "section_iii",
       "title": "SECTION III - DEFINITIONS",
       "level": 1,
-      "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.\n\"Property damage\" means:\n   a. Physical injury to tangible property, including all resulting loss of use of that property; or\n   b. Loss of use of tangible property that is not physically injured.\n\"Occurrence\" means an accident, including continuous or repeated exposure to substantially the same general harmful conditions.\n\"Coverage territory\" means:\n   a. The United States of America (including its territories and possessions), Puerto Rico and Canada;\n   b. International waters or airspace, but only if the injury or damage occurs in the course of travel or transportation between any places included in a. above.",
+      "text": "1. \"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.\n2. \"Property damage\" means:\n   a. Physical injury to tangible property, including all resulting loss of use of that property; or\n   b. Loss of use of tangible property that is not physically injured.",
       "parent_id": null,
       "formatting_cues": [
-        "quoted_text",
-        "subsections"
+        "numbering"
       ],
       "cross_references": [],
       "classification": {
@@ -115,8 +99,7 @@
       "text": "1. Bankruptcy\nBankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.\n2. Duties In The Event Of Occurrence, Offense, Claim Or Suit\na. You must see to it that we are notified as soon as practicable of an \"occurrence\" or an offense which may result in a claim.",
       "parent_id": null,
       "formatting_cues": [
-        "numbering",
-        "quoted_text"
+        "numbering"
       ],
       "cross_references": [],
       "classification": {
@@ -172,15 +155,7 @@
         }
       ]
     },
-    "cross_references": {
-      "endorsement": [
-        "Section II \u2013 Who Is An Insured"
-      ],
-      "section_i": [
-        "Section III - Limits Of Insurance",
-        "Section II \u2013 Who Is An Insured"
-      ]
-    }
+    "cross_references": {}
   },
   "section_counts": {
     "DECLARATIONS": 1,

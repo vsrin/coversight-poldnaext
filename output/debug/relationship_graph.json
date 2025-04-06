@@ -1,0 +1,1392 @@
+{
+  "nodes": [
+    {
+      "id": "element_declarations_0_ad81e498",
+      "type": "DEFINITION",
+      "section_id": "declarations",
+      "text": "Policy Number: TEST-12345",
+      "metadata": {
+        "subtype": "Policy Number",
+        "keywords": [
+          "Policy Number"
+        ]
+      },
+      "intent": {
+        "intent_summary": "Policy Number is a unique identifier assigned to a specific insurance policy.",
+        "coverage_effect": "DEFINES_TERM"
+      }
+    },
+    {
+      "id": "element_declarations_1_847e9332",
+      "type": "DEFINITION",
+      "section_id": "declarations",
+      "text": "Named Insured: ABC Corporation",
+      "metadata": {
+        "subtype": "Named Insured",
+        "keywords": [
+          "Named Insured",
+          "ABC Corporation"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element identifies ABC Corporation as the named insured on the insurance policy.",
+        "coverage_effect": "GRANTS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_declarations_2_54df392d",
+      "type": "TIME_ELEMENT",
+      "section_id": "declarations",
+      "text": "Policy Period: 01/01/2025 to 01/01/2026",
+      "metadata": {
+        "subtype": "Policy Period",
+        "keywords": [
+          "Policy Period"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element defines the time period during which the insurance policy is in effect.",
+        "coverage_effect": "DEFINES_TERM"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "TIMING"
+        ]
+      }
+    },
+    {
+      "id": "element_declarations_3_cbe6ec19",
+      "type": "SUB_LIMIT",
+      "section_id": "declarations",
+      "text": "Limits of Insurance: $1,000,000 Each Occurrence",
+      "metadata": {
+        "subtype": "Monetary Limit",
+        "keywords": [
+          "$1,000,000",
+          "Each Occurrence"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element sets the monetary limit of insurance coverage for each occurrence to $1,000,000.",
+        "coverage_effect": "LIMITS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "LIMITATION"
+        ]
+      }
+    },
+    {
+      "id": "element_endorsement_0_b9a8a57e",
+      "type": "CONDITION",
+      "section_id": "endorsement",
+      "text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVERAGE PART",
+      "metadata": {
+        "subtype": "Modification of Coverage",
+        "keywords": [
+          "endorsement",
+          "modifies",
+          "insurance",
+          "coverage",
+          "commercial general liability"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element modifies the insurance coverage provided under the Commercial General Liability Coverage Part.",
+        "coverage_effect": "MODIFIES_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_endorsement_1_6ed95c4b",
+      "type": "Definitions",
+      "section_id": "endorsement",
+      "text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+      "metadata": {
+        "subtype": "ADDITIONAL INSURED",
+        "keywords": [
+          "Additional Insured",
+          "XYZ Partner Company"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element designates XYZ Partner Company as an additional insured party under the insurance policy.",
+        "coverage_effect": "GRANTS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_endorsement_2_b4476c08",
+      "type": "COVERAGE_GRANT",
+      "section_id": "endorsement",
+      "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
+      "metadata": {
+        "subtype": "Additional Insured Endorsement",
+        "keywords": [
+          "additional insured",
+          "endorsement"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element extends coverage to additional insured persons or organizations listed in the Schedule.",
+        "coverage_effect": "GRANTS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_section_i_0_a093bc53",
+      "type": "COVERAGE_GRANT",
+      "section_id": "section_i",
+      "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
+      "metadata": {
+        "subtype": "Damages Coverage",
+        "keywords": [
+          "damages",
+          "bodily injury",
+          "property damage"
+        ]
+      },
+      "intent": {
+        "intent_summary": "Promises to pay for covered damages or losses",
+        "coverage_effect": "GRANTS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_section_i_1_80663102",
+      "type": "CONDITION",
+      "section_id": "section_i",
+      "text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+      "metadata": {
+        "subtype": "Duty to defend",
+        "keywords": [
+          "defend",
+          "insured",
+          "suit",
+          "damages"
+        ]
+      },
+      "intent": {
+        "intent_summary": "The insurance company has the right and duty to defend the insured in any legal action seeking damages.",
+        "coverage_effect": "IMPOSES_OBLIGATION"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_section_i_2_40941b60",
+      "type": "CONDITION",
+      "section_id": "section_i",
+      "text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply.",
+      "metadata": {
+        "subtype": "Duty to defend",
+        "keywords": [
+          "duty to defend",
+          "suit",
+          "bodily injury",
+          "property damage"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element states that the insurance company has no obligation to defend the insured in a lawsuit seeking damages for bodily injury or property damage that is not covered by the insurance policy.",
+        "coverage_effect": "LIMITS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "EXCLUSIONARY"
+        ]
+      }
+    },
+    {
+      "id": "element_section_ii_0_05dda4fa",
+      "type": "EXCLUSION",
+      "section_id": "section_ii",
+      "text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.",
+      "metadata": {
+        "subtype": "Expected or Intended Injury Exclusion",
+        "keywords": [
+          "expected",
+          "intended",
+          "injury",
+          "property damage"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element excludes coverage for bodily injury or property damage that is expected or intended by the insured.",
+        "coverage_effect": "EXCLUDES_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "EXCLUSIONARY"
+        ]
+      }
+    },
+    {
+      "id": "element_section_ii_1_794b815b",
+      "type": "EXCLUSION",
+      "section_id": "section_ii",
+      "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
+      "metadata": {
+        "subtype": "Contractual Liability",
+        "keywords": [
+          "contractual liability",
+          "bodily injury",
+          "property damage"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This exclusion pertains to bodily injury or property damage for which the insured is obligated to pay damages due to assuming liability in a contract or agreement.",
+        "coverage_effect": "EXCLUDES_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "EXCLUSIONARY"
+        ]
+      }
+    },
+    {
+      "id": "element_section_iii_0_3adaedc4",
+      "type": "DEFINITION",
+      "section_id": "section_iii",
+      "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.",
+      "metadata": {
+        "subtype": "Term Definition",
+        "keywords": [
+          "Bodily injury",
+          "sickness",
+          "disease",
+          "death"
+        ]
+      },
+      "intent": {
+        "intent_summary": "Defines the term 'bodily injury' for interpreting policy coverage",
+        "coverage_effect": "DEFINES_TERM"
+      },
+      "conditions": {
+        "count": 2,
+        "types": [
+          "LIMITATION"
+        ]
+      }
+    },
+    {
+      "id": "element_section_iii_1_5b2deabf",
+      "type": "DEFINITION",
+      "section_id": "section_iii",
+      "text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured.",
+      "metadata": {
+        "subtype": "Term Definition",
+        "keywords": [
+          "Property damage"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element defines 'property damage' as physical injury to tangible property or loss of use of tangible property that is not physically injured.",
+        "coverage_effect": "DEFINES_TERM"
+      },
+      "conditions": {
+        "count": 2,
+        "types": [
+          "LIMITATION",
+          "PREREQUISITE"
+        ]
+      }
+    },
+    {
+      "id": "element_section_iv_0_dc338854",
+      "type": "CONDITION",
+      "section_id": "section_iv",
+      "text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.",
+      "metadata": {
+        "subtype": "General Condition",
+        "keywords": [
+          "Bankruptcy",
+          "Insolvency",
+          "Obligations"
+        ]
+      },
+      "intent": {
+        "intent_summary": "This element ensures that the insurance company's obligations under the policy will not be relieved in the event of the insured's bankruptcy or insolvency.",
+        "coverage_effect": "GRANTS_COVERAGE"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "EXCLUSIONARY"
+        ]
+      }
+    },
+    {
+      "id": "element_section_iv_1_d5263b94",
+      "type": "CONDITION",
+      "section_id": "section_iv",
+      "text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
+      "metadata": {
+        "subtype": "Reporting Obligation",
+        "keywords": [
+          "notification",
+          "occurrence",
+          "offense",
+          "claim"
+        ]
+      },
+      "intent": {
+        "intent_summary": "Policyholder must promptly notify the insurer of any potential claim arising from an occurrence or offense.",
+        "coverage_effect": "IMPOSES_OBLIGATION"
+      },
+      "conditions": {
+        "count": 1,
+        "types": [
+          "REPORTING"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "REF-0001",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "bodily injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0002",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0003",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "property damage",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0004",
+      "source": "element_section_i_2_40941b60",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "bodily injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0005",
+      "source": "element_section_i_2_40941b60",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0006",
+      "source": "element_section_i_2_40941b60",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "property damage",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0007",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "Bodily injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0008",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "Injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0009",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0010",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "property damage",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0011",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "Bodily injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0012",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "injury",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "REF-0013",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "reference",
+      "subtype": "defined_term",
+      "text": "property damage",
+      "weight": 0.85,
+      "metadata": {}
+    },
+    {
+      "id": "DEP-0009",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_i_1_80663102",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.65,
+      "metadata": {
+        "origin": "element_type"
+      }
+    },
+    {
+      "id": "DEP-0010",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_i_2_40941b60",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.85,
+      "metadata": {
+        "origin": "conditional+element_type"
+      }
+    },
+    {
+      "id": "DEP-0011",
+      "source": "element_endorsement_2_b4476c08",
+      "target": "element_endorsement_0_b9a8a57e",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.65,
+      "metadata": {
+        "origin": "element_type"
+      }
+    },
+    {
+      "id": "DEP-0012",
+      "source": "element_declarations_1_847e9332",
+      "target": "element_endorsement_1_6ed95c4b",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.23,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0013",
+      "source": "element_declarations_1_847e9332",
+      "target": "element_endorsement_2_b4476c08",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.23,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0014",
+      "source": "element_declarations_1_847e9332",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.23,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0015",
+      "source": "element_declarations_2_54df392d",
+      "target": "element_declarations_0_ad81e498",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.35,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0016",
+      "source": "element_declarations_2_54df392d",
+      "target": "element_section_iv_0_dc338854",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.35,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0017",
+      "source": "element_declarations_3_cbe6ec19",
+      "target": "element_section_iv_1_d5263b94",
+      "type": "dependency",
+      "subtype": "restricts",
+      "weight": 0.4,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0018",
+      "source": "element_endorsement_1_6ed95c4b",
+      "target": "element_endorsement_2_b4476c08",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.4,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0019",
+      "source": "element_endorsement_1_6ed95c4b",
+      "target": "element_declarations_1_847e9332",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.2,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0020",
+      "source": "element_endorsement_2_b4476c08",
+      "target": "element_endorsement_1_6ed95c4b",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.52,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0021",
+      "source": "element_endorsement_2_b4476c08",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.17,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0022",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_ii_1_794b815b",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.4,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0023",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_ii_0_05dda4fa",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.25,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0024",
+      "source": "element_section_i_1_80663102",
+      "target": "element_section_i_2_40941b60",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.57,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0025",
+      "source": "element_section_i_1_80663102",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.25,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0026",
+      "source": "element_section_i_2_40941b60",
+      "target": "element_endorsement_0_b9a8a57e",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.35,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0027",
+      "source": "element_section_i_2_40941b60",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.35,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0028",
+      "source": "element_section_i_2_40941b60",
+      "target": "element_declarations_3_cbe6ec19",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.17,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0029",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.39,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0030",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_i_2_40941b60",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.39,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0031",
+      "source": "element_section_ii_0_05dda4fa",
+      "target": "element_section_ii_1_794b815b",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.39,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0032",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.43,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0033",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_i_2_40941b60",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.38,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0034",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_ii_0_05dda4fa",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.27,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0035",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_endorsement_1_6ed95c4b",
+      "type": "dependency",
+      "subtype": "restricts",
+      "weight": 0.2,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0036",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_endorsement_2_b4476c08",
+      "type": "dependency",
+      "subtype": "restricts",
+      "weight": 0.2,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0037",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_section_ii_0_05dda4fa",
+      "type": "dependency",
+      "subtype": "restricts",
+      "weight": 0.16,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0038",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "dependency",
+      "subtype": "restricts",
+      "weight": 0.16,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0039",
+      "source": "element_section_iii_1_5b2deabf",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.31,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0040",
+      "source": "element_section_iii_1_5b2deabf",
+      "target": "element_section_i_2_40941b60",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.23,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0041",
+      "source": "element_section_iii_1_5b2deabf",
+      "target": "element_section_ii_0_05dda4fa",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.23,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0042",
+      "source": "element_section_iv_0_dc338854",
+      "target": "element_declarations_1_847e9332",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.28,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0043",
+      "source": "element_section_iv_0_dc338854",
+      "target": "element_endorsement_1_6ed95c4b",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.28,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0044",
+      "source": "element_section_iv_0_dc338854",
+      "target": "element_endorsement_2_b4476c08",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.28,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0045",
+      "source": "element_section_iv_1_d5263b94",
+      "target": "element_section_i_0_a093bc53",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.14,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "DEP-0046",
+      "source": "element_section_iv_1_d5263b94",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "dependency",
+      "subtype": "requires",
+      "weight": 0.14,
+      "metadata": {
+        "origin": "conditional"
+      }
+    },
+    {
+      "id": "CONFLICT-0001-0",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_section_iv_1_d5263b94",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: restricts vs requires on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0002-0",
+      "source": "element_declarations_1_847e9332",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: requires vs restricts on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0003-0",
+      "source": "element_endorsement_2_b4476c08",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: requires vs restricts on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0004-0",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_section_iv_0_dc338854",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: restricts vs requires on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0005-0",
+      "source": "element_declarations_1_847e9332",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: requires vs restricts on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0006-0",
+      "source": "element_endorsement_1_6ed95c4b",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: requires vs restricts on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0007-0",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_section_iv_0_dc338854",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: restricts vs requires on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0008-0",
+      "source": "element_section_i_0_a093bc53",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: requires vs restricts on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0009-0",
+      "source": "element_section_ii_1_794b815b",
+      "target": "element_section_iii_0_3adaedc4",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: requires vs restricts on same target"
+      }
+    },
+    {
+      "id": "CONFLICT-0010-0",
+      "source": "element_section_iii_0_3adaedc4",
+      "target": "element_section_iii_1_5b2deabf",
+      "type": "conflict",
+      "subtype": "condition_exclusion_conflict",
+      "weight": 0.8,
+      "metadata": {
+        "description": "Conflicting dependencies: restricts vs requires on same target"
+      }
+    }
+  ],
+  "graph_stats": {
+    "node_count": 16,
+    "edge_count": 61,
+    "connectivity": {
+      "connected_components": 3,
+      "largest_component_size": 14,
+      "isolated_nodes": 0,
+      "isolated_percentage": 0.0
+    }
+  },
+  "most_referenced": [
+    {
+      "element_id": "element_section_iii_0_3adaedc4",
+      "element_type": "DEFINITION",
+      "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resu",
+      "reference_count": 16
+    },
+    {
+      "element_id": "element_section_i_0_a093bc53",
+      "element_type": "COVERAGE_GRANT",
+      "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodi",
+      "reference_count": 7
+    },
+    {
+      "element_id": "element_section_iii_1_5b2deabf",
+      "element_type": "DEFINITION",
+      "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of us",
+      "reference_count": 7
+    },
+    {
+      "element_id": "element_section_i_2_40941b60",
+      "element_type": "CONDITION",
+      "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily i",
+      "reference_count": 5
+    },
+    {
+      "element_id": "element_endorsement_1_6ed95c4b",
+      "element_type": "Definitions",
+      "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+      "reference_count": 4
+    },
+    {
+      "element_id": "element_endorsement_2_b4476c08",
+      "element_type": "COVERAGE_GRANT",
+      "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organ",
+      "reference_count": 4
+    },
+    {
+      "element_id": "element_section_ii_0_05dda4fa",
+      "element_type": "EXCLUSION",
+      "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the stand",
+      "reference_count": 4
+    },
+    {
+      "element_id": "element_section_iv_0_dc338854",
+      "element_type": "CONDITION",
+      "element_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obliga",
+      "reference_count": 3
+    },
+    {
+      "element_id": "element_declarations_1_847e9332",
+      "element_type": "DEFINITION",
+      "element_text": "Named Insured: ABC Corporation",
+      "reference_count": 2
+    },
+    {
+      "element_id": "element_endorsement_0_b9a8a57e",
+      "element_type": "CONDITION",
+      "element_text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVER",
+      "reference_count": 2
+    }
+  ],
+  "reference_type_counts": {
+    "defined_term": 13
+  },
+  "dependency_type_counts": {
+    "defines": 8,
+    "requires": 33,
+    "restricts": 5
+  },
+  "conflicts": [
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        },
+        {
+          "element_id": "element_section_iv_1_d5263b94",
+          "element_type": "CONDITION",
+          "element_text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_section_iii_1_5b2deabf",
+        "element_type": "DEFINITION",
+        "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible ..."
+      },
+      "description": "Conflicting dependencies: restricts vs requires on same target",
+      "dependency_ids": [
+        "DEP-0038",
+        "DEP-0046"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0001"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_declarations_1_847e9332",
+          "element_type": "DEFINITION",
+          "element_text": "Named Insured: ABC Corporation..."
+        },
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_endorsement_1_6ed95c4b",
+        "element_type": "Definitions",
+        "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0012",
+        "DEP-0035"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0002"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_endorsement_2_b4476c08",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+        },
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_endorsement_1_6ed95c4b",
+        "element_type": "Definitions",
+        "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0020",
+        "DEP-0035"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0003"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        },
+        {
+          "element_id": "element_section_iv_0_dc338854",
+          "element_type": "CONDITION",
+          "element_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_endorsement_1_6ed95c4b",
+        "element_type": "Definitions",
+        "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+      },
+      "description": "Conflicting dependencies: restricts vs requires on same target",
+      "dependency_ids": [
+        "DEP-0035",
+        "DEP-0043"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0004"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_declarations_1_847e9332",
+          "element_type": "DEFINITION",
+          "element_text": "Named Insured: ABC Corporation..."
+        },
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_endorsement_2_b4476c08",
+        "element_type": "COVERAGE_GRANT",
+        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0013",
+        "DEP-0036"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0005"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_endorsement_1_6ed95c4b",
+          "element_type": "Definitions",
+          "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+        },
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_endorsement_2_b4476c08",
+        "element_type": "COVERAGE_GRANT",
+        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0018",
+        "DEP-0036"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0006"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        },
+        {
+          "element_id": "element_section_iv_0_dc338854",
+          "element_type": "CONDITION",
+          "element_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_endorsement_2_b4476c08",
+        "element_type": "COVERAGE_GRANT",
+        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+      },
+      "description": "Conflicting dependencies: restricts vs requires on same target",
+      "dependency_ids": [
+        "DEP-0036",
+        "DEP-0044"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0007"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_i_0_a093bc53",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insu..."
+        },
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_section_ii_0_05dda4fa",
+        "element_type": "EXCLUSION",
+        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0023",
+        "DEP-0037"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0008"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_ii_1_794b815b",
+          "element_type": "EXCLUSION",
+          "element_text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability ..."
+        },
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_section_ii_0_05dda4fa",
+        "element_type": "EXCLUSION",
+        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0034",
+        "DEP-0037"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0009"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_iii_0_3adaedc4",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        },
+        {
+          "element_id": "element_section_iii_1_5b2deabf",
+          "element_type": "DEFINITION",
+          "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible ..."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_section_ii_0_05dda4fa",
+        "element_type": "EXCLUSION",
+        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+      },
+      "description": "Conflicting dependencies: restricts vs requires on same target",
+      "dependency_ids": [
+        "DEP-0037",
+        "DEP-0041"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0010"
+    }
+  ]
+}

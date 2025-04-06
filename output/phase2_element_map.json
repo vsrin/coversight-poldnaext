@@ -1,0 +1,1426 @@
+{
+  "document_id": "ef9f72dc-cc02-4395-bd5e-b223c488deb2",
+  "created_at": "2025-04-06T09:07:48.314312",
+  "metadata": {
+    "file_path": "/var/folders/nt/w87w0m9d7tv5nt1yyp2cbc0r0000gn/T/sample_policy.docx",
+    "file_type": "docx",
+    "total_pages": 0,
+    "extraction_date": "2025-04-06T09:07:48.314265",
+    "title": "",
+    "author": "python-docx",
+    "subject": "",
+    "created": "2013-12-23 23:15:00",
+    "modified": "2013-12-23 23:15:00"
+  },
+  "sections": [
+    {
+      "id": "declarations",
+      "title": "Declarations",
+      "level": 1,
+      "text": "Policy Number: TEST-12345\nNamed Insured: ABC Corporation\nPolicy Period: 01/01/2025 to 01/01/2026\nLimits of Insurance: $1,000,000 Each Occurrence",
+      "parent_id": null,
+      "formatting_cues": [],
+      "cross_references": [],
+      "classification": {
+        "classification": "DECLARATIONS",
+        "confidence": 0.9,
+        "evidence": "Title explicitly mentions declarations"
+      },
+      "children": [],
+      "elements": [
+        {
+          "text": "Policy Number: TEST-12345",
+          "type": "DEFINITION",
+          "metadata": {},
+          "id": "element_declarations_0_ad81e498",
+          "section_id": "declarations",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "subtype": "Policy Number",
+          "confidence": 0.9,
+          "explanation": "The element defines the term 'Policy Number' used in the policy.",
+          "keywords": [
+            "Policy Number"
+          ],
+          "function": "Identifies the unique identifier assigned to the insurance policy."
+        },
+        {
+          "text": "Named Insured: ABC Corporation",
+          "type": "DEFINITION",
+          "metadata": {},
+          "id": "element_declarations_1_847e9332",
+          "section_id": "declarations",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "subtype": "Named Insured",
+          "confidence": 0.95,
+          "explanation": "The element defines the term 'Named Insured' as ABC Corporation, specifying who is covered under the policy.",
+          "keywords": [
+            "Named Insured",
+            "ABC Corporation"
+          ],
+          "function": "Identifying the entity or individual that is the primary insured party under the policy."
+        },
+        {
+          "text": "Policy Period: 01/01/2025 to 01/01/2026",
+          "type": "TIME_ELEMENT",
+          "subtype": "Policy Period",
+          "metadata": {},
+          "id": "element_declarations_2_54df392d",
+          "section_id": "declarations",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "The element establishes the specific time period during which the policy is in effect, indicating the start and end dates.",
+          "keywords": [
+            "Policy Period"
+          ],
+          "function": "Defines the duration of coverage provided by the insurance policy."
+        },
+        {
+          "text": "Limits of Insurance: $1,000,000 Each Occurrence",
+          "type": "SUB_LIMIT",
+          "subtype": "Monetary Limit",
+          "metadata": {
+            "has_monetary_value": true,
+            "monetary_values": [
+              "$1,000,000"
+            ]
+          },
+          "id": "element_declarations_3_cbe6ec19",
+          "section_id": "declarations",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.9,
+          "explanation": "This element specifies a specific monetary limit of $1,000,000 for each occurrence, which is a sub-limit within the broader coverage provided by the policy.",
+          "keywords": [
+            "$1,000,000",
+            "Each Occurrence"
+          ],
+          "function": "To establish the maximum amount of coverage available for each individual occurrence of a covered loss."
+        }
+      ]
+    },
+    {
+      "id": "endorsement",
+      "title": "ENDORSEMENT - ADDITIONAL INSURED",
+      "level": 1,
+      "text": "This endorsement modifies insurance provided under the following:\nCOMMERCIAL GENERAL LIABILITY COVERAGE PART\n\nSCHEDULE\nName of Additional Insured Person(s) Or Organization(s):\nXYZ Partner Company\n\nSection II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
+      "parent_id": null,
+      "formatting_cues": [],
+      "cross_references": [],
+      "classification": {
+        "classification": "ENDORSEMENT",
+        "confidence": 0.9,
+        "evidence": "Title explicitly mentions endorsement"
+      },
+      "children": [],
+      "elements": [
+        {
+          "text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVERAGE PART",
+          "type": "CONDITION",
+          "subtype": "Modification of Coverage",
+          "metadata": {},
+          "id": "element_endorsement_0_b9a8a57e",
+          "section_id": "endorsement",
+          "parent_element_id": null,
+          "child_element_ids": [
+            "element_endorsement_1_6ed95c4b"
+          ],
+          "confidence": 0.85,
+          "explanation": "This endorsement modifies the coverage provided under the Commercial General Liability Coverage Part, indicating a condition that alters the scope of coverage.",
+          "keywords": [
+            "endorsement",
+            "modifies",
+            "insurance",
+            "coverage",
+            "commercial general liability"
+          ],
+          "function": "To specify the changes or modifications to the insurance coverage provided under the Commercial General Liability Coverage Part."
+        },
+        {
+          "text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+          "type": "Definitions",
+          "subtype": "ADDITIONAL INSURED",
+          "metadata": {},
+          "id": "element_endorsement_1_6ed95c4b",
+          "section_id": "endorsement",
+          "parent_element_id": "element_endorsement_0_b9a8a57e",
+          "child_element_ids": [],
+          "confidence": 0.9,
+          "explanation": "The element specifies the addition of XYZ Partner Company as an additional insured party, extending coverage to them. (Corrected invalid type)",
+          "keywords": [
+            "Additional Insured",
+            "XYZ Partner Company"
+          ],
+          "function": "To extend coverage to a specific entity beyond the named insured"
+        },
+        {
+          "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
+          "type": "COVERAGE_GRANT",
+          "subtype": "Additional Insured Endorsement",
+          "metadata": {},
+          "id": "element_endorsement_2_b4476c08",
+          "section_id": "endorsement",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "The element expands the coverage to include additional insured parties specified in the Schedule.",
+          "keywords": [
+            "additional insured",
+            "endorsement"
+          ],
+          "function": "This element specifies that certain persons or organizations listed in the Schedule are considered insured under the policy.",
+          "references": [
+            {
+              "target_id": "element_endorsement_1_6ed95c4b",
+              "explanation": "The COVERAGE_GRANT element refers to the Definitions element by mentioning the additional insured person(s) or organization(s) shown in the Schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section_i",
+      "title": "SECTION I - INSURING AGREEMENT",
+      "level": 1,
+      "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of \"bodily injury\" or \"property damage\" to which this insurance applies. We will have the right and duty to defend the insured against any \"suit\" seeking those damages. However, we will have no duty to defend the insured against any \"suit\" seeking damages for \"bodily injury\" or \"property damage\" to which this insurance does not apply.",
+      "parent_id": null,
+      "formatting_cues": [],
+      "cross_references": [],
+      "classification": {
+        "classification": "INSURING_AGREEMENT",
+        "confidence": 0.9,
+        "evidence": "Title indicates coverage grant"
+      },
+      "children": [],
+      "elements": [
+        {
+          "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
+          "type": "COVERAGE_GRANT",
+          "subtype": "Damages Coverage",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_i_0_a093bc53",
+          "section_id": "section_i",
+          "parent_element_id": null,
+          "child_element_ids": [
+            "element_section_i_1_80663102",
+            "element_section_i_2_40941b60"
+          ],
+          "confidence": 0.95,
+          "explanation": "The element provides coverage for damages that the insured becomes legally obligated to pay due to bodily injury or property damage.",
+          "keywords": [
+            "damages",
+            "bodily injury",
+            "property damage"
+          ],
+          "function": "To specify the scope of coverage provided by the insurance policy in terms of liability for bodily injury or property damage."
+        },
+        {
+          "text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+          "type": "CONDITION",
+          "subtype": "Duty to defend",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_i_1_80663102",
+          "section_id": "section_i",
+          "parent_element_id": "element_section_i_0_a093bc53",
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "This element establishes a requirement for the insurer to defend the insured in case of a suit seeking damages.",
+          "keywords": [
+            "defend",
+            "insured",
+            "suit",
+            "damages"
+          ],
+          "function": "Specifies the insurer's obligation to provide legal defense for the insured in certain situations."
+        },
+        {
+          "text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply.",
+          "type": "CONDITION",
+          "subtype": "Duty to defend",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_i_2_40941b60",
+          "section_id": "section_i",
+          "parent_element_id": "element_section_i_0_a093bc53",
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "This element establishes a requirement for the insurer to defend the insured only for damages that fall within the scope of coverage provided by the policy.",
+          "keywords": [
+            "duty to defend",
+            "suit",
+            "bodily injury",
+            "property damage"
+          ],
+          "function": "Establishes the conditions under which the insurer is obligated to defend the insured in legal actions related to covered damages."
+        }
+      ]
+    },
+    {
+      "id": "section_ii",
+      "title": "SECTION II - EXCLUSIONS",
+      "level": 1,
+      "text": "This insurance does not apply to:\n1. Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.\n2. Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
+      "parent_id": null,
+      "formatting_cues": [
+        "bullet_list"
+      ],
+      "cross_references": [],
+      "classification": {
+        "classification": "EXCLUSIONS",
+        "confidence": 0.9,
+        "evidence": "Title explicitly mentions exclusions"
+      },
+      "children": [],
+      "elements": [
+        {
+          "text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.",
+          "type": "EXCLUSION",
+          "subtype": "Expected or Intended Injury Exclusion",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_ii_0_05dda4fa",
+          "section_id": "section_ii",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "The element explicitly removes coverage for bodily injury or property damage that is expected or intended by the insured.",
+          "keywords": [
+            "expected",
+            "intended",
+            "injury",
+            "property damage"
+          ],
+          "function": "To exclude coverage for situations where the insured intentionally causes bodily injury or property damage."
+        },
+        {
+          "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
+          "type": "EXCLUSION",
+          "subtype": "Contractual Liability",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_ii_1_794b815b",
+          "section_id": "section_ii",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.9,
+          "explanation": "The element explicitly removes coverage for bodily injury or property damage arising from contractual liability assumed by the insured.",
+          "keywords": [
+            "contractual liability",
+            "bodily injury",
+            "property damage"
+          ],
+          "function": "Excludes coverage for liabilities assumed by the insured under contracts or agreements."
+        }
+      ]
+    },
+    {
+      "id": "section_iii",
+      "title": "SECTION III - DEFINITIONS",
+      "level": 1,
+      "text": "1. \"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.\n2. \"Property damage\" means:\n   a. Physical injury to tangible property, including all resulting loss of use of that property; or\n   b. Loss of use of tangible property that is not physically injured.",
+      "parent_id": null,
+      "formatting_cues": [
+        "numbering"
+      ],
+      "cross_references": [],
+      "classification": {
+        "classification": "DEFINITIONS",
+        "confidence": 0.9,
+        "evidence": "Title explicitly mentions definitions"
+      },
+      "children": [],
+      "elements": [
+        {
+          "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.",
+          "type": "DEFINITION",
+          "subtype": "Term Definition",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_iii_0_3adaedc4",
+          "section_id": "section_iii",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "The element provides a definition for the term 'Bodily injury' used in the policy.",
+          "keywords": [
+            "Bodily injury",
+            "sickness",
+            "disease",
+            "death"
+          ],
+          "function": "To clarify and specify the scope of coverage related to bodily harm or injury to a person."
+        },
+        {
+          "text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured.",
+          "type": "DEFINITION",
+          "subtype": "Term Definition",
+          "metadata": {
+            "has_monetary_value": false,
+            "monetary_values": [],
+            "contains_reference": false,
+            "references": [],
+            "contains_condition": false,
+            "conditions": []
+          },
+          "id": "element_section_iii_1_5b2deabf",
+          "section_id": "section_iii",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.95,
+          "explanation": "The element provides a definition for the term 'Property damage' used in the policy.",
+          "keywords": [
+            "Property damage"
+          ],
+          "function": "To clarify the meaning of 'Property damage' for the purpose of the insurance policy."
+        }
+      ]
+    },
+    {
+      "id": "section_iv",
+      "title": "SECTION IV - CONDITIONS",
+      "level": 1,
+      "text": "1. Bankruptcy\nBankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.\n2. Duties In The Event Of Occurrence, Offense, Claim Or Suit\na. You must see to it that we are notified as soon as practicable of an \"occurrence\" or an offense which may result in a claim.",
+      "parent_id": null,
+      "formatting_cues": [
+        "numbering"
+      ],
+      "cross_references": [],
+      "classification": {
+        "classification": "CONDITIONS",
+        "confidence": 0.9,
+        "evidence": "Title explicitly mentions conditions"
+      },
+      "children": [],
+      "elements": [
+        {
+          "text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.",
+          "type": "CONDITION",
+          "metadata": {
+            "has_monetary_value": false,
+            "contains_reference": false,
+            "contains_condition": false
+          },
+          "id": "element_section_iv_0_dc338854",
+          "section_id": "section_iv",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "subtype": "General Condition",
+          "confidence": 0.95,
+          "explanation": "This element establishes a requirement that the bankruptcy or insolvency of the insured will not relieve the insurer of its obligations under the policy.",
+          "keywords": [
+            "Bankruptcy",
+            "Insolvency",
+            "Obligations"
+          ],
+          "function": "To ensure that the insurer remains obligated to fulfill the terms of the policy even in the event of the insured's bankruptcy or insolvency."
+        },
+        {
+          "text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
+          "type": "CONDITION",
+          "subtype": "Reporting Obligation",
+          "metadata": {
+            "has_monetary_value": false,
+            "contains_reference": false,
+            "contains_condition": true,
+            "conditions": [
+              "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim."
+            ]
+          },
+          "id": "element_section_iv_1_d5263b94",
+          "section_id": "section_iv",
+          "parent_element_id": null,
+          "child_element_ids": [],
+          "confidence": 0.9,
+          "explanation": "This element establishes a requirement for the insured to notify the insurer of an 'occurrence' or offense that may result in a claim, indicating a reporting obligation.",
+          "keywords": [
+            "notification",
+            "occurrence",
+            "offense",
+            "claim"
+          ],
+          "function": "To ensure timely reporting of potential claims to the insurer for proper handling and investigation."
+        }
+      ]
+    }
+  ],
+  "navigation": {
+    "by_type": {
+      "DECLARATIONS": [
+        {
+          "id": "declarations",
+          "title": "Declarations",
+          "confidence": 0.9
+        }
+      ],
+      "ENDORSEMENT": [
+        {
+          "id": "endorsement",
+          "title": "ENDORSEMENT - ADDITIONAL INSURED",
+          "confidence": 0.9
+        }
+      ],
+      "INSURING_AGREEMENT": [
+        {
+          "id": "section_i",
+          "title": "SECTION I - INSURING AGREEMENT",
+          "confidence": 0.9
+        }
+      ],
+      "EXCLUSIONS": [
+        {
+          "id": "section_ii",
+          "title": "SECTION II - EXCLUSIONS",
+          "confidence": 0.9
+        }
+      ],
+      "DEFINITIONS": [
+        {
+          "id": "section_iii",
+          "title": "SECTION III - DEFINITIONS",
+          "confidence": 0.9
+        }
+      ],
+      "CONDITIONS": [
+        {
+          "id": "section_iv",
+          "title": "SECTION IV - CONDITIONS",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "cross_references": {}
+  },
+  "section_counts": {
+    "DECLARATIONS": 1,
+    "ENDORSEMENT": 1,
+    "INSURING_AGREEMENT": 1,
+    "EXCLUSIONS": 1,
+    "DEFINITIONS": 1,
+    "CONDITIONS": 1,
+    "TOTAL": 6
+  },
+  "elements": [
+    {
+      "text": "Policy Number: TEST-12345",
+      "type": "DEFINITION",
+      "metadata": {},
+      "id": "element_declarations_0_ad81e498",
+      "section_id": "declarations",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "subtype": "Policy Number",
+      "confidence": 0.9,
+      "explanation": "The element defines the term 'Policy Number' used in the policy.",
+      "keywords": [
+        "Policy Number"
+      ],
+      "function": "Identifies the unique identifier assigned to the insurance policy."
+    },
+    {
+      "text": "Named Insured: ABC Corporation",
+      "type": "DEFINITION",
+      "metadata": {},
+      "id": "element_declarations_1_847e9332",
+      "section_id": "declarations",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "subtype": "Named Insured",
+      "confidence": 0.95,
+      "explanation": "The element defines the term 'Named Insured' as ABC Corporation, specifying who is covered under the policy.",
+      "keywords": [
+        "Named Insured",
+        "ABC Corporation"
+      ],
+      "function": "Identifying the entity or individual that is the primary insured party under the policy."
+    },
+    {
+      "text": "Policy Period: 01/01/2025 to 01/01/2026",
+      "type": "TIME_ELEMENT",
+      "subtype": "Policy Period",
+      "metadata": {},
+      "id": "element_declarations_2_54df392d",
+      "section_id": "declarations",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "The element establishes the specific time period during which the policy is in effect, indicating the start and end dates.",
+      "keywords": [
+        "Policy Period"
+      ],
+      "function": "Defines the duration of coverage provided by the insurance policy."
+    },
+    {
+      "text": "Limits of Insurance: $1,000,000 Each Occurrence",
+      "type": "SUB_LIMIT",
+      "subtype": "Monetary Limit",
+      "metadata": {
+        "has_monetary_value": true,
+        "monetary_values": [
+          "$1,000,000"
+        ]
+      },
+      "id": "element_declarations_3_cbe6ec19",
+      "section_id": "declarations",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.9,
+      "explanation": "This element specifies a specific monetary limit of $1,000,000 for each occurrence, which is a sub-limit within the broader coverage provided by the policy.",
+      "keywords": [
+        "$1,000,000",
+        "Each Occurrence"
+      ],
+      "function": "To establish the maximum amount of coverage available for each individual occurrence of a covered loss."
+    },
+    {
+      "text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVERAGE PART",
+      "type": "CONDITION",
+      "subtype": "Modification of Coverage",
+      "metadata": {},
+      "id": "element_endorsement_0_b9a8a57e",
+      "section_id": "endorsement",
+      "parent_element_id": null,
+      "child_element_ids": [
+        "element_endorsement_1_6ed95c4b"
+      ],
+      "confidence": 0.85,
+      "explanation": "This endorsement modifies the coverage provided under the Commercial General Liability Coverage Part, indicating a condition that alters the scope of coverage.",
+      "keywords": [
+        "endorsement",
+        "modifies",
+        "insurance",
+        "coverage",
+        "commercial general liability"
+      ],
+      "function": "To specify the changes or modifications to the insurance coverage provided under the Commercial General Liability Coverage Part."
+    },
+    {
+      "text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+      "type": "Definitions",
+      "subtype": "ADDITIONAL INSURED",
+      "metadata": {},
+      "id": "element_endorsement_1_6ed95c4b",
+      "section_id": "endorsement",
+      "parent_element_id": "element_endorsement_0_b9a8a57e",
+      "child_element_ids": [],
+      "confidence": 0.9,
+      "explanation": "The element specifies the addition of XYZ Partner Company as an additional insured party, extending coverage to them. (Corrected invalid type)",
+      "keywords": [
+        "Additional Insured",
+        "XYZ Partner Company"
+      ],
+      "function": "To extend coverage to a specific entity beyond the named insured"
+    },
+    {
+      "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
+      "type": "COVERAGE_GRANT",
+      "subtype": "Additional Insured Endorsement",
+      "metadata": {},
+      "id": "element_endorsement_2_b4476c08",
+      "section_id": "endorsement",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "The element expands the coverage to include additional insured parties specified in the Schedule.",
+      "keywords": [
+        "additional insured",
+        "endorsement"
+      ],
+      "function": "This element specifies that certain persons or organizations listed in the Schedule are considered insured under the policy.",
+      "references": [
+        {
+          "target_id": "element_endorsement_1_6ed95c4b",
+          "explanation": "The COVERAGE_GRANT element refers to the Definitions element by mentioning the additional insured person(s) or organization(s) shown in the Schedule."
+        }
+      ]
+    },
+    {
+      "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
+      "type": "COVERAGE_GRANT",
+      "subtype": "Damages Coverage",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_i_0_a093bc53",
+      "section_id": "section_i",
+      "parent_element_id": null,
+      "child_element_ids": [
+        "element_section_i_1_80663102",
+        "element_section_i_2_40941b60"
+      ],
+      "confidence": 0.95,
+      "explanation": "The element provides coverage for damages that the insured becomes legally obligated to pay due to bodily injury or property damage.",
+      "keywords": [
+        "damages",
+        "bodily injury",
+        "property damage"
+      ],
+      "function": "To specify the scope of coverage provided by the insurance policy in terms of liability for bodily injury or property damage."
+    },
+    {
+      "text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+      "type": "CONDITION",
+      "subtype": "Duty to defend",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_i_1_80663102",
+      "section_id": "section_i",
+      "parent_element_id": "element_section_i_0_a093bc53",
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "This element establishes a requirement for the insurer to defend the insured in case of a suit seeking damages.",
+      "keywords": [
+        "defend",
+        "insured",
+        "suit",
+        "damages"
+      ],
+      "function": "Specifies the insurer's obligation to provide legal defense for the insured in certain situations."
+    },
+    {
+      "text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply.",
+      "type": "CONDITION",
+      "subtype": "Duty to defend",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_i_2_40941b60",
+      "section_id": "section_i",
+      "parent_element_id": "element_section_i_0_a093bc53",
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "This element establishes a requirement for the insurer to defend the insured only for damages that fall within the scope of coverage provided by the policy.",
+      "keywords": [
+        "duty to defend",
+        "suit",
+        "bodily injury",
+        "property damage"
+      ],
+      "function": "Establishes the conditions under which the insurer is obligated to defend the insured in legal actions related to covered damages."
+    },
+    {
+      "text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.",
+      "type": "EXCLUSION",
+      "subtype": "Expected or Intended Injury Exclusion",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_ii_0_05dda4fa",
+      "section_id": "section_ii",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "The element explicitly removes coverage for bodily injury or property damage that is expected or intended by the insured.",
+      "keywords": [
+        "expected",
+        "intended",
+        "injury",
+        "property damage"
+      ],
+      "function": "To exclude coverage for situations where the insured intentionally causes bodily injury or property damage."
+    },
+    {
+      "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
+      "type": "EXCLUSION",
+      "subtype": "Contractual Liability",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_ii_1_794b815b",
+      "section_id": "section_ii",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.9,
+      "explanation": "The element explicitly removes coverage for bodily injury or property damage arising from contractual liability assumed by the insured.",
+      "keywords": [
+        "contractual liability",
+        "bodily injury",
+        "property damage"
+      ],
+      "function": "Excludes coverage for liabilities assumed by the insured under contracts or agreements."
+    },
+    {
+      "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.",
+      "type": "DEFINITION",
+      "subtype": "Term Definition",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_iii_0_3adaedc4",
+      "section_id": "section_iii",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "The element provides a definition for the term 'Bodily injury' used in the policy.",
+      "keywords": [
+        "Bodily injury",
+        "sickness",
+        "disease",
+        "death"
+      ],
+      "function": "To clarify and specify the scope of coverage related to bodily harm or injury to a person."
+    },
+    {
+      "text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured.",
+      "type": "DEFINITION",
+      "subtype": "Term Definition",
+      "metadata": {
+        "has_monetary_value": false,
+        "monetary_values": [],
+        "contains_reference": false,
+        "references": [],
+        "contains_condition": false,
+        "conditions": []
+      },
+      "id": "element_section_iii_1_5b2deabf",
+      "section_id": "section_iii",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.95,
+      "explanation": "The element provides a definition for the term 'Property damage' used in the policy.",
+      "keywords": [
+        "Property damage"
+      ],
+      "function": "To clarify the meaning of 'Property damage' for the purpose of the insurance policy."
+    },
+    {
+      "text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.",
+      "type": "CONDITION",
+      "metadata": {
+        "has_monetary_value": false,
+        "contains_reference": false,
+        "contains_condition": false
+      },
+      "id": "element_section_iv_0_dc338854",
+      "section_id": "section_iv",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "subtype": "General Condition",
+      "confidence": 0.95,
+      "explanation": "This element establishes a requirement that the bankruptcy or insolvency of the insured will not relieve the insurer of its obligations under the policy.",
+      "keywords": [
+        "Bankruptcy",
+        "Insolvency",
+        "Obligations"
+      ],
+      "function": "To ensure that the insurer remains obligated to fulfill the terms of the policy even in the event of the insured's bankruptcy or insolvency."
+    },
+    {
+      "text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
+      "type": "CONDITION",
+      "subtype": "Reporting Obligation",
+      "metadata": {
+        "has_monetary_value": false,
+        "contains_reference": false,
+        "contains_condition": true,
+        "conditions": [
+          "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim."
+        ]
+      },
+      "id": "element_section_iv_1_d5263b94",
+      "section_id": "section_iv",
+      "parent_element_id": null,
+      "child_element_ids": [],
+      "confidence": 0.9,
+      "explanation": "This element establishes a requirement for the insured to notify the insurer of an 'occurrence' or offense that may result in a claim, indicating a reporting obligation.",
+      "keywords": [
+        "notification",
+        "occurrence",
+        "offense",
+        "claim"
+      ],
+      "function": "To ensure timely reporting of potential claims to the insurer for proper handling and investigation."
+    }
+  ],
+  "element_counts": {
+    "DEFINITION": 4,
+    "TIME_ELEMENT": 1,
+    "SUB_LIMIT": 1,
+    "CONDITION": 5,
+    "Definitions": 1,
+    "COVERAGE_GRANT": 2,
+    "EXCLUSION": 2,
+    "TOTAL": 16
+  },
+  "element_navigation": {
+    "by_type": {
+      "DEFINITION": [
+        {
+          "id": "element_declarations_0_ad81e498",
+          "text": "Policy Number: TEST-12345",
+          "subtype": "Policy Number",
+          "section_id": "declarations",
+          "confidence": 0.9
+        },
+        {
+          "id": "element_declarations_1_847e9332",
+          "text": "Named Insured: ABC Corporation",
+          "subtype": "Named Insured",
+          "section_id": "declarations",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_iii_0_3adaedc4",
+          "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resu...",
+          "subtype": "Term Definition",
+          "section_id": "section_iii",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_iii_1_5b2deabf",
+          "text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of us...",
+          "subtype": "Term Definition",
+          "section_id": "section_iii",
+          "confidence": 0.95
+        }
+      ],
+      "TIME_ELEMENT": [
+        {
+          "id": "element_declarations_2_54df392d",
+          "text": "Policy Period: 01/01/2025 to 01/01/2026",
+          "subtype": "Policy Period",
+          "section_id": "declarations",
+          "confidence": 0.95
+        }
+      ],
+      "SUB_LIMIT": [
+        {
+          "id": "element_declarations_3_cbe6ec19",
+          "text": "Limits of Insurance: $1,000,000 Each Occurrence",
+          "subtype": "Monetary Limit",
+          "section_id": "declarations",
+          "confidence": 0.9
+        }
+      ],
+      "CONDITION": [
+        {
+          "id": "element_endorsement_0_b9a8a57e",
+          "text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVER...",
+          "subtype": "Modification of Coverage",
+          "section_id": "endorsement",
+          "confidence": 0.85
+        },
+        {
+          "id": "element_section_i_1_80663102",
+          "text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+          "subtype": "Duty to defend",
+          "section_id": "section_i",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_i_2_40941b60",
+          "text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily i...",
+          "subtype": "Duty to defend",
+          "section_id": "section_i",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_iv_0_dc338854",
+          "text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obliga...",
+          "subtype": "General Condition",
+          "section_id": "section_iv",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_iv_1_d5263b94",
+          "text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense whic...",
+          "subtype": "Reporting Obligation",
+          "section_id": "section_iv",
+          "confidence": 0.9
+        }
+      ],
+      "Definitions": [
+        {
+          "id": "element_endorsement_1_6ed95c4b",
+          "text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+          "subtype": "ADDITIONAL INSURED",
+          "section_id": "endorsement",
+          "confidence": 0.9
+        }
+      ],
+      "COVERAGE_GRANT": [
+        {
+          "id": "element_endorsement_2_b4476c08",
+          "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organ...",
+          "subtype": "Additional Insured Endorsement",
+          "section_id": "endorsement",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_i_0_a093bc53",
+          "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodi...",
+          "subtype": "Damages Coverage",
+          "section_id": "section_i",
+          "confidence": 0.95
+        }
+      ],
+      "EXCLUSION": [
+        {
+          "id": "element_section_ii_0_05dda4fa",
+          "text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the stand...",
+          "subtype": "Expected or Intended Injury Exclusion",
+          "section_id": "section_ii",
+          "confidence": 0.95
+        },
+        {
+          "id": "element_section_ii_1_794b815b",
+          "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay...",
+          "subtype": "Contractual Liability",
+          "section_id": "section_ii",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "relationships": {
+      "element_declarations_0_ad81e498": {
+        "parent": null,
+        "children": []
+      },
+      "element_declarations_1_847e9332": {
+        "parent": null,
+        "children": []
+      },
+      "element_declarations_2_54df392d": {
+        "parent": null,
+        "children": []
+      },
+      "element_declarations_3_cbe6ec19": {
+        "parent": null,
+        "children": []
+      },
+      "element_endorsement_0_b9a8a57e": {
+        "parent": null,
+        "children": [
+          "element_endorsement_1_6ed95c4b"
+        ]
+      },
+      "element_endorsement_1_6ed95c4b": {
+        "parent": "element_endorsement_0_b9a8a57e",
+        "children": []
+      },
+      "element_endorsement_2_b4476c08": {
+        "parent": null,
+        "children": [],
+        "references": [
+          {
+            "target_id": "element_endorsement_1_6ed95c4b",
+            "explanation": "The COVERAGE_GRANT element refers to the Definitions element by mentioning the additional insured person(s) or organization(s) shown in the Schedule."
+          }
+        ]
+      },
+      "element_section_i_0_a093bc53": {
+        "parent": null,
+        "children": [
+          "element_section_i_1_80663102",
+          "element_section_i_2_40941b60"
+        ]
+      },
+      "element_section_i_1_80663102": {
+        "parent": "element_section_i_0_a093bc53",
+        "children": []
+      },
+      "element_section_i_2_40941b60": {
+        "parent": "element_section_i_0_a093bc53",
+        "children": []
+      },
+      "element_section_ii_0_05dda4fa": {
+        "parent": null,
+        "children": []
+      },
+      "element_section_ii_1_794b815b": {
+        "parent": null,
+        "children": []
+      },
+      "element_section_iii_0_3adaedc4": {
+        "parent": null,
+        "children": []
+      },
+      "element_section_iii_1_5b2deabf": {
+        "parent": null,
+        "children": []
+      },
+      "element_section_iv_0_dc338854": {
+        "parent": null,
+        "children": []
+      },
+      "element_section_iv_1_d5263b94": {
+        "parent": null,
+        "children": []
+      }
+    },
+    "keywords": {
+      "policy number": [
+        {
+          "id": "element_declarations_0_ad81e498",
+          "type": "DEFINITION"
+        }
+      ],
+      "named insured": [
+        {
+          "id": "element_declarations_1_847e9332",
+          "type": "DEFINITION"
+        }
+      ],
+      "abc corporation": [
+        {
+          "id": "element_declarations_1_847e9332",
+          "type": "DEFINITION"
+        }
+      ],
+      "policy period": [
+        {
+          "id": "element_declarations_2_54df392d",
+          "type": "TIME_ELEMENT"
+        }
+      ],
+      "$1,000,000": [
+        {
+          "id": "element_declarations_3_cbe6ec19",
+          "type": "SUB_LIMIT"
+        }
+      ],
+      "each occurrence": [
+        {
+          "id": "element_declarations_3_cbe6ec19",
+          "type": "SUB_LIMIT"
+        }
+      ],
+      "endorsement": [
+        {
+          "id": "element_endorsement_0_b9a8a57e",
+          "type": "CONDITION"
+        },
+        {
+          "id": "element_endorsement_2_b4476c08",
+          "type": "COVERAGE_GRANT"
+        }
+      ],
+      "modifies": [
+        {
+          "id": "element_endorsement_0_b9a8a57e",
+          "type": "CONDITION"
+        }
+      ],
+      "insurance": [
+        {
+          "id": "element_endorsement_0_b9a8a57e",
+          "type": "CONDITION"
+        }
+      ],
+      "coverage": [
+        {
+          "id": "element_endorsement_0_b9a8a57e",
+          "type": "CONDITION"
+        }
+      ],
+      "commercial general liability": [
+        {
+          "id": "element_endorsement_0_b9a8a57e",
+          "type": "CONDITION"
+        }
+      ],
+      "additional insured": [
+        {
+          "id": "element_endorsement_1_6ed95c4b",
+          "type": "Definitions"
+        },
+        {
+          "id": "element_endorsement_2_b4476c08",
+          "type": "COVERAGE_GRANT"
+        }
+      ],
+      "xyz partner company": [
+        {
+          "id": "element_endorsement_1_6ed95c4b",
+          "type": "Definitions"
+        }
+      ],
+      "damages": [
+        {
+          "id": "element_section_i_0_a093bc53",
+          "type": "COVERAGE_GRANT"
+        },
+        {
+          "id": "element_section_i_1_80663102",
+          "type": "CONDITION"
+        }
+      ],
+      "bodily injury": [
+        {
+          "id": "element_section_i_0_a093bc53",
+          "type": "COVERAGE_GRANT"
+        },
+        {
+          "id": "element_section_i_2_40941b60",
+          "type": "CONDITION"
+        },
+        {
+          "id": "element_section_ii_1_794b815b",
+          "type": "EXCLUSION"
+        },
+        {
+          "id": "element_section_iii_0_3adaedc4",
+          "type": "DEFINITION"
+        }
+      ],
+      "property damage": [
+        {
+          "id": "element_section_i_0_a093bc53",
+          "type": "COVERAGE_GRANT"
+        },
+        {
+          "id": "element_section_i_2_40941b60",
+          "type": "CONDITION"
+        },
+        {
+          "id": "element_section_ii_0_05dda4fa",
+          "type": "EXCLUSION"
+        },
+        {
+          "id": "element_section_ii_1_794b815b",
+          "type": "EXCLUSION"
+        },
+        {
+          "id": "element_section_iii_1_5b2deabf",
+          "type": "DEFINITION"
+        }
+      ],
+      "defend": [
+        {
+          "id": "element_section_i_1_80663102",
+          "type": "CONDITION"
+        }
+      ],
+      "insured": [
+        {
+          "id": "element_section_i_1_80663102",
+          "type": "CONDITION"
+        }
+      ],
+      "suit": [
+        {
+          "id": "element_section_i_1_80663102",
+          "type": "CONDITION"
+        },
+        {
+          "id": "element_section_i_2_40941b60",
+          "type": "CONDITION"
+        }
+      ],
+      "duty to defend": [
+        {
+          "id": "element_section_i_2_40941b60",
+          "type": "CONDITION"
+        }
+      ],
+      "expected": [
+        {
+          "id": "element_section_ii_0_05dda4fa",
+          "type": "EXCLUSION"
+        }
+      ],
+      "intended": [
+        {
+          "id": "element_section_ii_0_05dda4fa",
+          "type": "EXCLUSION"
+        }
+      ],
+      "injury": [
+        {
+          "id": "element_section_ii_0_05dda4fa",
+          "type": "EXCLUSION"
+        }
+      ],
+      "contractual liability": [
+        {
+          "id": "element_section_ii_1_794b815b",
+          "type": "EXCLUSION"
+        }
+      ],
+      "sickness": [
+        {
+          "id": "element_section_iii_0_3adaedc4",
+          "type": "DEFINITION"
+        }
+      ],
+      "disease": [
+        {
+          "id": "element_section_iii_0_3adaedc4",
+          "type": "DEFINITION"
+        }
+      ],
+      "death": [
+        {
+          "id": "element_section_iii_0_3adaedc4",
+          "type": "DEFINITION"
+        }
+      ],
+      "bankruptcy": [
+        {
+          "id": "element_section_iv_0_dc338854",
+          "type": "CONDITION"
+        }
+      ],
+      "insolvency": [
+        {
+          "id": "element_section_iv_0_dc338854",
+          "type": "CONDITION"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "element_section_iv_0_dc338854",
+          "type": "CONDITION"
+        }
+      ],
+      "notification": [
+        {
+          "id": "element_section_iv_1_d5263b94",
+          "type": "CONDITION"
+        }
+      ],
+      "occurrence": [
+        {
+          "id": "element_section_iv_1_d5263b94",
+          "type": "CONDITION"
+        }
+      ],
+      "offense": [
+        {
+          "id": "element_section_iv_1_d5263b94",
+          "type": "CONDITION"
+        }
+      ],
+      "claim": [
+        {
+          "id": "element_section_iv_1_d5263b94",
+          "type": "CONDITION"
+        }
+      ]
+    }
+  },
+  "policy_insights": {
+    "coverage_summary": [
+      {
+        "id": "element_endorsement_2_b4476c08",
+        "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
+        "subtype": "Additional Insured Endorsement",
+        "monetary_values": [],
+        "has_conditions": false
+      },
+      {
+        "id": "element_section_i_0_a093bc53",
+        "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
+        "subtype": "Damages Coverage",
+        "monetary_values": [],
+        "has_conditions": false
+      }
+    ],
+    "key_exclusions": [
+      {
+        "id": "element_section_ii_0_05dda4fa",
+        "text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.",
+        "subtype": "Expected or Intended Injury Exclusion"
+      },
+      {
+        "id": "element_section_ii_1_794b815b",
+        "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
+        "subtype": "Contractual Liability"
+      }
+    ],
+    "key_definitions": [
+      {
+        "id": "element_section_iii_0_3adaedc4",
+        "term": "Bodily injury",
+        "definition": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time."
+      },
+      {
+        "id": "element_section_iii_1_5b2deabf",
+        "term": "Property damage",
+        "definition": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured."
+      }
+    ],
+    "monetary_provisions": [
+      {
+        "id": "element_declarations_3_cbe6ec19",
+        "type": "SUB_LIMIT",
+        "subtype": "Monetary Limit",
+        "text": "Limits of Insurance: $1,000,000 Each Occurrence",
+        "monetary_values": [
+          "$1,000,000"
+        ]
+      }
+    ],
+    "reporting_obligations": []
+  }
+}

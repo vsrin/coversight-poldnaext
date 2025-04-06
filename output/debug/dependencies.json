@@ -1,0 +1,627 @@
+{
+  "dependencies": [
+    {
+      "source_id": "element_section_i_0_a093bc53",
+      "target_id": "element_section_iii_0_3adaedc4",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0001",
+        "reference_type": "defined_term",
+        "reference_text": "bodily injury"
+      },
+      "dependency_id": "DEP-0001"
+    },
+    {
+      "source_id": "element_section_i_0_a093bc53",
+      "target_id": "element_section_iii_1_5b2deabf",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0003",
+        "reference_type": "defined_term",
+        "reference_text": "property damage"
+      },
+      "dependency_id": "DEP-0002"
+    },
+    {
+      "source_id": "element_section_i_2_40941b60",
+      "target_id": "element_section_iii_0_3adaedc4",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0004",
+        "reference_type": "defined_term",
+        "reference_text": "bodily injury"
+      },
+      "dependency_id": "DEP-0003"
+    },
+    {
+      "source_id": "element_section_i_2_40941b60",
+      "target_id": "element_section_iii_1_5b2deabf",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0006",
+        "reference_type": "defined_term",
+        "reference_text": "property damage"
+      },
+      "dependency_id": "DEP-0004"
+    },
+    {
+      "source_id": "element_section_ii_0_05dda4fa",
+      "target_id": "element_section_iii_0_3adaedc4",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0007",
+        "reference_type": "defined_term",
+        "reference_text": "Bodily injury"
+      },
+      "dependency_id": "DEP-0005"
+    },
+    {
+      "source_id": "element_section_ii_0_05dda4fa",
+      "target_id": "element_section_iii_1_5b2deabf",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0010",
+        "reference_type": "defined_term",
+        "reference_text": "property damage"
+      },
+      "dependency_id": "DEP-0006"
+    },
+    {
+      "source_id": "element_section_ii_1_794b815b",
+      "target_id": "element_section_iii_0_3adaedc4",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0011",
+        "reference_type": "defined_term",
+        "reference_text": "Bodily injury"
+      },
+      "dependency_id": "DEP-0007"
+    },
+    {
+      "source_id": "element_section_ii_1_794b815b",
+      "target_id": "element_section_iii_1_5b2deabf",
+      "dependency_type": "defines",
+      "strength": 0.42,
+      "origin": "reference",
+      "reference_data": {
+        "reference_id": "REF-0013",
+        "reference_type": "defined_term",
+        "reference_text": "property damage"
+      },
+      "dependency_id": "DEP-0008"
+    },
+    {
+      "source_id": "element_section_i_0_a093bc53",
+      "target_id": "element_section_i_1_80663102",
+      "dependency_type": "requires",
+      "strength": 0.65,
+      "origin": "element_type",
+      "similarity_data": {
+        "common_keywords": [
+          "damages"
+        ],
+        "text_similarity": 1
+      },
+      "dependency_id": "DEP-0009"
+    },
+    {
+      "source_id": "element_section_i_0_a093bc53",
+      "target_id": "element_section_i_2_40941b60",
+      "dependency_type": "requires",
+      "strength": 0.85,
+      "origin": "conditional+element_type",
+      "similarity_data": {
+        "common_keywords": [
+          "bodily injury",
+          "property damage"
+        ],
+        "text_similarity": 3
+      },
+      "combined_evidence": {
+        "similarity_data": {
+          "common_keywords": [
+            "bodily injury",
+            "property damage"
+          ],
+          "text_similarity": 3
+        },
+        "condition_data": {
+          "condition_type": "PREREQUISITE",
+          "condition_text": "the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies",
+          "similarity_score": 0.6428571428571429
+        }
+      },
+      "dependency_id": "DEP-0010"
+    },
+    {
+      "source_id": "element_endorsement_2_b4476c08",
+      "target_id": "element_endorsement_0_b9a8a57e",
+      "dependency_type": "requires",
+      "strength": 0.65,
+      "origin": "element_type",
+      "similarity_data": {
+        "common_keywords": [
+          "endorsement"
+        ],
+        "text_similarity": 1
+      },
+      "dependency_id": "DEP-0011"
+    },
+    {
+      "source_id": "element_declarations_1_847e9332",
+      "target_id": "element_endorsement_1_6ed95c4b",
+      "dependency_type": "requires",
+      "strength": 0.23,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Named Insured: ABC Corporation",
+        "similarity_score": 0.3333333333333333
+      },
+      "dependency_id": "DEP-0012"
+    },
+    {
+      "source_id": "element_declarations_1_847e9332",
+      "target_id": "element_endorsement_2_b4476c08",
+      "dependency_type": "requires",
+      "strength": 0.23,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Named Insured: ABC Corporation",
+        "similarity_score": 0.3333333333333333
+      },
+      "dependency_id": "DEP-0013"
+    },
+    {
+      "source_id": "element_declarations_1_847e9332",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.23,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Named Insured: ABC Corporation",
+        "similarity_score": 0.3333333333333333
+      },
+      "dependency_id": "DEP-0014"
+    },
+    {
+      "source_id": "element_declarations_2_54df392d",
+      "target_id": "element_declarations_0_ad81e498",
+      "dependency_type": "requires",
+      "strength": 0.35,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "TIMING",
+        "condition_text": "Policy Period: 01/01/2025 to 01/01/2026",
+        "similarity_score": 0.5
+      },
+      "dependency_id": "DEP-0015"
+    },
+    {
+      "source_id": "element_declarations_2_54df392d",
+      "target_id": "element_section_iv_0_dc338854",
+      "dependency_type": "requires",
+      "strength": 0.35,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "TIMING",
+        "condition_text": "Policy Period: 01/01/2025 to 01/01/2026",
+        "similarity_score": 0.5
+      },
+      "dependency_id": "DEP-0016"
+    },
+    {
+      "source_id": "element_declarations_3_cbe6ec19",
+      "target_id": "element_section_iv_1_d5263b94",
+      "dependency_type": "restricts",
+      "strength": 0.4,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "LIMITATION",
+        "condition_text": "$1,000,000 Each Occurrence",
+        "similarity_score": 0.5
+      },
+      "dependency_id": "DEP-0017"
+    },
+    {
+      "source_id": "element_endorsement_1_6ed95c4b",
+      "target_id": "element_endorsement_2_b4476c08",
+      "dependency_type": "requires",
+      "strength": 0.4,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+        "similarity_score": 0.5714285714285714
+      },
+      "dependency_id": "DEP-0018"
+    },
+    {
+      "source_id": "element_endorsement_1_6ed95c4b",
+      "target_id": "element_declarations_1_847e9332",
+      "dependency_type": "requires",
+      "strength": 0.2,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
+        "similarity_score": 0.2857142857142857
+      },
+      "dependency_id": "DEP-0019"
+    },
+    {
+      "source_id": "element_endorsement_2_b4476c08",
+      "target_id": "element_endorsement_1_6ed95c4b",
+      "dependency_type": "requires",
+      "strength": 0.52,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "the person(s) or organization(s) shown in the Schedule",
+        "similarity_score": 0.75
+      },
+      "dependency_id": "DEP-0020"
+    },
+    {
+      "source_id": "element_endorsement_2_b4476c08",
+      "target_id": "element_section_iii_0_3adaedc4",
+      "dependency_type": "requires",
+      "strength": 0.17,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "the person(s) or organization(s) shown in the Schedule",
+        "similarity_score": 0.25
+      },
+      "dependency_id": "DEP-0021"
+    },
+    {
+      "source_id": "element_section_i_0_a093bc53",
+      "target_id": "element_section_ii_1_794b815b",
+      "dependency_type": "requires",
+      "strength": 0.4,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies",
+        "similarity_score": 0.5714285714285714
+      },
+      "dependency_id": "DEP-0022"
+    },
+    {
+      "source_id": "element_section_i_0_a093bc53",
+      "target_id": "element_section_ii_0_05dda4fa",
+      "dependency_type": "requires",
+      "strength": 0.25,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies",
+        "similarity_score": 0.35714285714285715
+      },
+      "dependency_id": "DEP-0023"
+    },
+    {
+      "source_id": "element_section_i_1_80663102",
+      "target_id": "element_section_i_2_40941b60",
+      "dependency_type": "requires",
+      "strength": 0.57,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+        "similarity_score": 0.8181818181818182
+      },
+      "dependency_id": "DEP-0024"
+    },
+    {
+      "source_id": "element_section_i_1_80663102",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.25,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+        "similarity_score": 0.36363636363636365
+      },
+      "dependency_id": "DEP-0025"
+    },
+    {
+      "source_id": "element_section_i_2_40941b60",
+      "target_id": "element_endorsement_0_b9a8a57e",
+      "dependency_type": "requires",
+      "strength": 0.35,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "this insurance does not apply",
+        "similarity_score": 0.5
+      },
+      "dependency_id": "DEP-0026"
+    },
+    {
+      "source_id": "element_section_i_2_40941b60",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.35,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "this insurance does not apply",
+        "similarity_score": 0.5
+      },
+      "dependency_id": "DEP-0027"
+    },
+    {
+      "source_id": "element_section_i_2_40941b60",
+      "target_id": "element_declarations_3_cbe6ec19",
+      "dependency_type": "requires",
+      "strength": 0.17,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "this insurance does not apply",
+        "similarity_score": 0.25
+      },
+      "dependency_id": "DEP-0028"
+    },
+    {
+      "source_id": "element_section_ii_0_05dda4fa",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.39,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured",
+        "similarity_score": 0.5555555555555556
+      },
+      "dependency_id": "DEP-0029"
+    },
+    {
+      "source_id": "element_section_ii_0_05dda4fa",
+      "target_id": "element_section_i_2_40941b60",
+      "dependency_type": "requires",
+      "strength": 0.39,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured",
+        "similarity_score": 0.5555555555555556
+      },
+      "dependency_id": "DEP-0030"
+    },
+    {
+      "source_id": "element_section_ii_0_05dda4fa",
+      "target_id": "element_section_ii_1_794b815b",
+      "dependency_type": "requires",
+      "strength": 0.39,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured",
+        "similarity_score": 0.5555555555555556
+      },
+      "dependency_id": "DEP-0031"
+    },
+    {
+      "source_id": "element_section_ii_1_794b815b",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.43,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement",
+        "similarity_score": 0.6153846153846154
+      },
+      "dependency_id": "DEP-0032"
+    },
+    {
+      "source_id": "element_section_ii_1_794b815b",
+      "target_id": "element_section_i_2_40941b60",
+      "dependency_type": "requires",
+      "strength": 0.38,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement",
+        "similarity_score": 0.5384615384615384
+      },
+      "dependency_id": "DEP-0033"
+    },
+    {
+      "source_id": "element_section_ii_1_794b815b",
+      "target_id": "element_section_ii_0_05dda4fa",
+      "dependency_type": "requires",
+      "strength": 0.27,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement",
+        "similarity_score": 0.38461538461538464
+      },
+      "dependency_id": "DEP-0034"
+    },
+    {
+      "source_id": "element_section_iii_0_3adaedc4",
+      "target_id": "element_endorsement_1_6ed95c4b",
+      "dependency_type": "restricts",
+      "strength": 0.2,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "LIMITATION",
+        "condition_text": "sickness or disease sustained by a person",
+        "similarity_score": 0.25
+      },
+      "dependency_id": "DEP-0035"
+    },
+    {
+      "source_id": "element_section_iii_0_3adaedc4",
+      "target_id": "element_endorsement_2_b4476c08",
+      "dependency_type": "restricts",
+      "strength": 0.2,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "LIMITATION",
+        "condition_text": "sickness or disease sustained by a person",
+        "similarity_score": 0.25
+      },
+      "dependency_id": "DEP-0036"
+    },
+    {
+      "source_id": "element_section_iii_0_3adaedc4",
+      "target_id": "element_section_ii_0_05dda4fa",
+      "dependency_type": "restricts",
+      "strength": 0.16,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "LIMITATION",
+        "condition_text": "death resulting from any of these at any time",
+        "similarity_score": 0.2
+      },
+      "dependency_id": "DEP-0037"
+    },
+    {
+      "source_id": "element_section_iii_0_3adaedc4",
+      "target_id": "element_section_iii_1_5b2deabf",
+      "dependency_type": "restricts",
+      "strength": 0.16,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "LIMITATION",
+        "condition_text": "death resulting from any of these at any time",
+        "similarity_score": 0.2
+      },
+      "dependency_id": "DEP-0038"
+    },
+    {
+      "source_id": "element_section_iii_1_5b2deabf",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.31,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Physical injury to tangible property, including all resulting loss of use of that property",
+        "similarity_score": 0.4444444444444444
+      },
+      "dependency_id": "DEP-0039"
+    },
+    {
+      "source_id": "element_section_iii_1_5b2deabf",
+      "target_id": "element_section_i_2_40941b60",
+      "dependency_type": "requires",
+      "strength": 0.23,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Physical injury to tangible property, including all resulting loss of use of that property",
+        "similarity_score": 0.3333333333333333
+      },
+      "dependency_id": "DEP-0040"
+    },
+    {
+      "source_id": "element_section_iii_1_5b2deabf",
+      "target_id": "element_section_ii_0_05dda4fa",
+      "dependency_type": "requires",
+      "strength": 0.23,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "PREREQUISITE",
+        "condition_text": "Physical injury to tangible property, including all resulting loss of use of that property",
+        "similarity_score": 0.3333333333333333
+      },
+      "dependency_id": "DEP-0041"
+    },
+    {
+      "source_id": "element_section_iv_0_dc338854",
+      "target_id": "element_declarations_1_847e9332",
+      "dependency_type": "requires",
+      "strength": 0.28,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "Bankruptcy or insolvency of the insured or of the insured's estate",
+        "similarity_score": 0.4
+      },
+      "dependency_id": "DEP-0042"
+    },
+    {
+      "source_id": "element_section_iv_0_dc338854",
+      "target_id": "element_endorsement_1_6ed95c4b",
+      "dependency_type": "requires",
+      "strength": 0.28,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "Bankruptcy or insolvency of the insured or of the insured's estate",
+        "similarity_score": 0.4
+      },
+      "dependency_id": "DEP-0043"
+    },
+    {
+      "source_id": "element_section_iv_0_dc338854",
+      "target_id": "element_endorsement_2_b4476c08",
+      "dependency_type": "requires",
+      "strength": 0.28,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "EXCLUSIONARY",
+        "condition_text": "Bankruptcy or insolvency of the insured or of the insured's estate",
+        "similarity_score": 0.4
+      },
+      "dependency_id": "DEP-0044"
+    },
+    {
+      "source_id": "element_section_iv_1_d5263b94",
+      "target_id": "element_section_i_0_a093bc53",
+      "dependency_type": "requires",
+      "strength": 0.14,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "REPORTING",
+        "condition_text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
+        "similarity_score": 0.2
+      },
+      "dependency_id": "DEP-0045"
+    },
+    {
+      "source_id": "element_section_iv_1_d5263b94",
+      "target_id": "element_section_iii_1_5b2deabf",
+      "dependency_type": "requires",
+      "strength": 0.14,
+      "origin": "conditional",
+      "condition_data": {
+        "condition_type": "REPORTING",
+        "condition_text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
+        "similarity_score": 0.2
+      },
+      "dependency_id": "DEP-0046"
+    }
+  ],
+  "dependency_chains": [],
+  "dependency_type_counts": {
+    "defines": 8,
+    "requires": 33,
+    "restricts": 5
+  },
+  "total_dependencies": 46
+}

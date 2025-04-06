@@ -1,8 +1,11 @@
 """
 Main module for the Policy DNA Extractor.
 
-This module orchestrates the complete policy analysis process, coordinating both
-document processing/segmentation and element extraction/classification stages.
+This module orchestrates the complete policy analysis process, coordinating all four phases:
+1. Document Processing and Segmentation
+2. Element Extraction and Classification
+3. Deep Language Analysis
+4. Cross-Reference and Dependency Mapping
 """
 
 import os
@@ -19,6 +22,15 @@ from src.element_extractor import ElementExtractor
 from src.element_classifier import ElementClassifier
 from src.relationship_analyzer import ElementRelationshipAnalyzer
 from src.element_mapper import ElementMapper
+from src.intent_analyzer import IntentAnalyzer
+from src.conditional_language_detector import ConditionalLanguageDetector
+from src.term_extractor import TermExtractor
+from src.language_mapper import LanguageMapper
+# Phase 4 imports
+from src.reference_detector import ReferenceDetector
+from src.dependency_analyzer import DependencyAnalyzer
+from src.conflict_identifier import ConflictIdentifier
+from src.graph_builder import GraphBuilder
 
 class PolicyDNAExtractor:
     """Main orchestrator for policy DNA extraction."""
@@ -46,6 +58,18 @@ class PolicyDNAExtractor:
         self.element_classifier = ElementClassifier(self.llm_client)
         self.relationship_analyzer = ElementRelationshipAnalyzer(self.llm_client)
         self.element_mapper = ElementMapper()
+        
+        # Initialize deep language analysis components
+        self.intent_analyzer = IntentAnalyzer(self.llm_client)
+        self.conditional_language_detector = ConditionalLanguageDetector(self.llm_client)
+        self.term_extractor = TermExtractor(self.llm_client)
+        self.language_mapper = LanguageMapper()
+        
+        # Initialize cross-reference and dependency mapping components
+        self.reference_detector = ReferenceDetector(self.config, self.llm_client)
+        self.dependency_analyzer = DependencyAnalyzer(self.config, self.llm_client)
+        self.conflict_identifier = ConflictIdentifier(self.config, self.llm_client)
+        self.graph_builder = GraphBuilder(self.config)
         
         # Create output directory if it doesn't exist
         os.makedirs(self.config.output_dir, exist_ok=True)
@@ -161,8 +185,128 @@ class PolicyDNAExtractor:
         print("Step 8: Creating element map...")
         enhanced_document_map = self.element_mapper.create_element_map(enhanced_elements, document_map)
         
-        # Save the enhanced document map
-        output_path = self._save_document_map(enhanced_document_map, document_path)
+        # Save phase 2 results if in debug mode
+        if self.config.debug_mode:
+            self._save_intermediate_result(enhanced_document_map, document_path, "phase2_element_map")
+        
+        # PHASE 3: Deep Language Analysis
+        
+        # Step 9: Analyze element intent
+        print("Step 9: Analyzing element intent...")
+        elements_with_intent = []
+        
+        try:
+            elements_with_intent = self.intent_analyzer.analyze_intent(enhanced_elements)
+            if self.config.debug_mode:
+                self._save_intermediate_result(elements_with_intent, document_path, "elements_with_intent")
+        except Exception as e:
+            print(f"  Error analyzing element intent: {str(e)}")
+            elements_with_intent = enhanced_elements  # Fall back to previous elements
+        
+        # Step 10: Detect conditional language
+        print("Step 10: Detecting conditional language...")
+        elements_with_conditions = []
+        
+        try:
+            elements_with_conditions = self.conditional_language_detector.detect_conditions(elements_with_intent)
+            if self.config.debug_mode:
+                self._save_intermediate_result(elements_with_conditions, document_path, "elements_with_conditions")
+        except Exception as e:
+            print(f"  Error detecting conditional language: {str(e)}")
+            elements_with_conditions = elements_with_intent  # Fall back to previous elements
+        
+        # Step 11: Extract specific terms
+        print("Step 11: Extracting specific terms...")
+        elements_with_terms = []
+        
+        try:
+            elements_with_terms = self.term_extractor.extract_terms(elements_with_conditions)
+            if self.config.debug_mode:
+                self._save_intermediate_result(elements_with_terms, document_path, "elements_with_terms")
+        except Exception as e:
+            print(f"  Error extracting specific terms: {str(e)}")
+            elements_with_terms = elements_with_conditions  # Fall back to previous elements
+        
+        # Step 12: Create language map
+        print("Step 12: Creating language map...")
+        final_document_map = {}
+        
+        try:
+            final_document_map = self.language_mapper.create_language_map(elements_with_terms, enhanced_document_map)
+        except Exception as e:
+            print(f"  Error creating language map: {str(e)}")
+            final_document_map = enhanced_document_map  # Fall back to phase 2 document map
+        
+        # Save phase 3 results if in debug mode
+        if self.config.debug_mode:
+            self._save_intermediate_result(final_document_map, document_path, "phase3_language_map")
+            
+        # PHASE 4: Cross-Reference and Dependency Mapping
+        
+        # Step 13: Detect references
+        print("Step 13: Detecting cross-references...")
+        references = []
+        
+        try:
+            references = self.reference_detector.detect_references(final_document_map)
+            if self.config.debug_mode:
+                self._save_intermediate_result(references, document_path, "detected_references")
+        except Exception as e:
+            print(f"  Error detecting references: {str(e)}")
+            # Create empty references if error occurs
+            references = []
+        
+        # Step 14: Analyze dependencies
+        print("Step 14: Analyzing logical dependencies...")
+        dependencies = []
+        
+        try:
+            dependencies = self.dependency_analyzer.analyze_dependencies(final_document_map, references)
+            if self.config.debug_mode:
+                self._save_intermediate_result(dependencies, document_path, "analyzed_dependencies")
+        except Exception as e:
+            print(f"  Error analyzing dependencies: {str(e)}")
+            # Create empty dependencies if error occurs
+            dependencies = []
+        
+        # Step 15: Identify conflicts
+        print("Step 15: Identifying potential conflicts...")
+        conflicts = []
+        
+        try:
+            conflicts = self.conflict_identifier.identify_conflicts(final_document_map, dependencies)
+            if self.config.debug_mode:
+                self._save_intermediate_result(conflicts, document_path, "identified_conflicts")
+        except Exception as e:
+            print(f"  Error identifying conflicts: {str(e)}")
+            # Create empty conflicts if error occurs
+            conflicts = []
+        
+        # Step 16: Build relationship graph
+        print("Step 16: Building relationship graph...")
+        graph_result = {}
+        
+        try:
+            graph_result = self.graph_builder.build_graph(final_document_map, references, dependencies, conflicts)
+            final_document_map['cross_reference_map'] = graph_result
+            if self.config.debug_mode:
+                self._save_intermediate_result(graph_result, document_path, "relationship_graph")
+        except Exception as e:
+            print(f"  Error building relationship graph: {str(e)}")
+            # Create empty graph if error occurs
+            graph_result = {
+                "graph_stats": {"node_count": 0, "edge_count": 0},
+                "nodes": [],
+                "edges": []
+            }
+            final_document_map['cross_reference_map'] = graph_result
+        
+        # Save phase 4 results if in debug mode
+        if self.config.debug_mode:
+            self._save_intermediate_result(final_document_map, document_path, "phase4_graph_map")
+        
+        # Save the final document map
+        output_path = self._save_document_map(final_document_map, document_path)
         
         # Calculate and display processing time
         end_time = time.time()
@@ -170,10 +314,10 @@ class PolicyDNAExtractor:
         print(f"Document processing complete in {processing_time:.2f} seconds.")
         print(f"Policy DNA extracted and saved to: {output_path}")
         
-        # Print summary of extracted elements
-        self._print_extraction_summary(enhanced_document_map)
+        # Print summary of extracted elements and language analysis
+        self._print_extraction_summary(final_document_map)
         
-        return enhanced_document_map
+        return final_document_map
     
     def _save_document_map(self, document_map: Dict, original_path: str) -> str:
         """
@@ -266,6 +410,58 @@ class PolicyDNAExtractor:
             # Monetary provisions
             monetary_count = len(insights.get('monetary_provisions', []))
             print(f"  - Monetary provisions: {monetary_count}")
+        
+        # Print language insights if available (from Phase 3)
+        if 'language_insights' in document_map:
+            language_insights = document_map['language_insights']
+            print("\nLanguage Analysis Insights:")
+            
+            # Coverage summary
+            coverage_summary = language_insights.get('coverage_summary', {})
+            if coverage_summary:
+                print(f"  - Coverage grants: {len(coverage_summary.get('coverage_grants', []))}")
+                print(f"  - Key exclusions: {len(coverage_summary.get('key_exclusions', []))}")
+                print(f"  - Key limitations: {len(coverage_summary.get('key_limitations', []))}")
+            
+            # Conditions
+            key_conditions = language_insights.get('key_conditions', [])
+            print(f"  - Key conditions: {len(key_conditions)}")
+            
+            # Defined terms
+            defined_terms = language_insights.get('defined_terms_usage', {})
+            if defined_terms:
+                print(f"  - Defined terms: {defined_terms.get('defined_terms_count', 0)}")
+                print(f"  - Terms with definitions: {defined_terms.get('terms_with_definitions', 0)}")
+            
+            # Interpretation challenges
+            challenges = language_insights.get('interpretation_challenges', [])
+            print(f"  - Potential interpretation challenges: {len(challenges)}")
+            
+        # Print cross-reference insights if available (from Phase 4)
+        if 'cross_reference_map' in document_map:
+            cross_ref_map = document_map['cross_reference_map']
+            print("\nCross-Reference Insights:")
+            
+            # Graph statistics
+            graph_stats = cross_ref_map.get('graph_stats', {})
+            print(f"  - Total nodes: {graph_stats.get('node_count', 0)}")
+            print(f"  - Total relationships: {graph_stats.get('edge_count', 0)}")
+            
+            # Reference types
+            ref_types = cross_ref_map.get('reference_type_counts', {})
+            for ref_type, count in ref_types.items():
+                print(f"  - {ref_type} references: {count}")
+            
+            # Conflict count
+            conflicts = cross_ref_map.get('conflicts', [])
+            print(f"  - Potential conflicts: {len(conflicts)}")
+            
+            # Most connected elements
+            most_connected = cross_ref_map.get('most_referenced', [])
+            if most_connected and len(most_connected) > 0:
+                print("\n  Most referenced elements:")
+                for i, element in enumerate(most_connected[:3]):
+                    print(f"    {i+1}. {element.get('element_text', '')[:50]}... ({element.get('reference_count', 0)} references)")
 
 def main():
     """Main entry point for the Policy DNA Extractor."""
@@ -275,6 +471,7 @@ def main():
     parser.add_argument("--output-dir", help="Directory to save output files")
     parser.add_argument("--debug", action="store_true", help="Enable debug mode")
     parser.add_argument("--skip-relationships", action="store_true", help="Skip relationship analysis")
+    parser.add_argument("--phase", type=int, choices=[1, 2, 3, 4], help="Run specific phase (1, 2, 3, or 4)")
     
     args = parser.parse_args()
     
@@ -292,7 +489,27 @@ def main():
     
     # Create and run the extractor
     extractor = PolicyDNAExtractor(config)
-    extractor.process_document(args.document)
+    
+    # Process document based on specified phase
+    if args.phase == 1:
+        # Run only Phase 1: Document Processing and Segmentation
+        # Implementation would go here
+        print("Running only Phase 1 is not yet implemented")
+    elif args.phase == 2:
+        # Run only Phase 2: Element Extraction and Classification
+        # Implementation would go here
+        print("Running only Phase 2 is not yet implemented")
+    elif args.phase == 3:
+        # Run only Phase 3: Deep Language Analysis
+        # Implementation would go here
+        print("Running only Phase 3 is not yet implemented")
+    elif args.phase == 4:
+        # Run only Phase 4: Cross-Reference and Dependency Mapping
+        # Implementation would go here
+        print("Running only Phase 4 is not yet implemented")
+    else:
+        # Run all phases
+        extractor.process_document(args.document)
 
 if __name__ == "__main__":
     main()

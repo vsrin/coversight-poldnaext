@@ -10,14 +10,14 @@ class LLMConfig(BaseModel):
     """Configuration for the LLM client."""
     provider: str = "openai"  # The LLM provider (e.g., "openai", "anthropic", "gemini")
     model: str = Field(default="gpt-3.5-turbo")  # The model to use
-    api_key: Optional[str] = None  # API key (default: read from environment)
+    api_key: Optional[str] = "YOUR_OPENAI_API_KEY_HERE"  # Replace with your actual OpenAI API key
     max_tokens: int = 4000  # Maximum response tokens
     temperature: float = 0.2  # Response randomness (0.0 to 1.0)
     
     def __init__(self, **data):
         super().__init__(**data)
         # Try to get API key from environment if not provided
-        if self.api_key is None:
+        if self.api_key == "YOUR_OPENAI_API_KEY_HERE":
             if self.provider == "openai":
                 self.api_key = os.environ.get("OPENAI_API_KEY")
             elif self.provider == "anthropic":
@@ -25,7 +25,7 @@ class LLMConfig(BaseModel):
             elif self.provider == "gemini":
                 self.api_key = os.environ.get("GOOGLE_API_KEY")
                 
-        if self.api_key is None:
+        if self.api_key is None or self.api_key == "YOUR_OPENAI_API_KEY_HERE":
             raise ValueError(f"No API key provided for {self.provider}")
 
 class ParserConfig(BaseModel):
