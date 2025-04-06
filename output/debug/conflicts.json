@@ -4,25 +4,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_section_iii_0_3adaedc4",
+          "element_id": "element_section_iii_0_7622e2f9",
           "element_type": "DEFINITION",
           "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
         },
         {
-          "element_id": "element_section_iv_1_d5263b94",
+          "element_id": "element_section_iv_1_18966dc4",
           "element_type": "CONDITION",
           "element_text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim...."
         }
       ],
       "target_element": {
-        "element_id": "element_section_iii_1_5b2deabf",
+        "element_id": "element_section_iii_1_09608b63",
         "element_type": "DEFINITION",
         "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible ..."
       },
       "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0038",
-        "DEP-0046"
+        "DEP-0034",
+        "DEP-0042"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0001"
@@ -31,25 +31,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_declarations_1_847e9332",
-          "element_type": "DEFINITION",
-          "element_text": "Named Insured: ABC Corporation..."
+          "element_id": "element_section_i_0_22d23c4d",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insu..."
         },
         {
-          "element_id": "element_section_iii_0_3adaedc4",
-          "element_type": "DEFINITION",
-          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+          "element_id": "element_section_ii_0_1e3fe4aa",
+          "element_type": "EXCLUSION",
+          "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
         }
       ],
       "target_element": {
-        "element_id": "element_endorsement_1_6ed95c4b",
-        "element_type": "Definitions",
-        "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+        "element_id": "element_section_i_2_8b8e7a64",
+        "element_type": "EXCLUSION",
+        "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insuranc..."
       },
-      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0012",
-        "DEP-0035"
+        "DEP-0009",
+        "DEP-0027"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0002"
@@ -58,25 +58,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_endorsement_2_b4476c08",
+          "element_id": "element_section_i_0_22d23c4d",
           "element_type": "COVERAGE_GRANT",
-          "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+          "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insu..."
         },
         {
-          "element_id": "element_section_iii_0_3adaedc4",
-          "element_type": "DEFINITION",
-          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+          "element_id": "element_section_ii_1_e823d709",
+          "element_type": "EXCLUSION",
+          "element_text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability ..."
         }
       ],
       "target_element": {
-        "element_id": "element_endorsement_1_6ed95c4b",
-        "element_type": "Definitions",
-        "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+        "element_id": "element_section_i_2_8b8e7a64",
+        "element_type": "EXCLUSION",
+        "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insuranc..."
       },
-      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0020",
-        "DEP-0035"
+        "DEP-0009",
+        "DEP-0030"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0003"
@@ -85,25 +85,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_section_iii_0_3adaedc4",
-          "element_type": "DEFINITION",
-          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+          "element_id": "element_section_i_0_22d23c4d",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insu..."
         },
         {
-          "element_id": "element_section_iv_0_dc338854",
-          "element_type": "CONDITION",
-          "element_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy...."
+          "element_id": "element_section_iii_1_09608b63",
+          "element_type": "DEFINITION",
+          "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible ..."
         }
       ],
       "target_element": {
-        "element_id": "element_endorsement_1_6ed95c4b",
-        "element_type": "Definitions",
-        "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+        "element_id": "element_section_i_2_8b8e7a64",
+        "element_type": "EXCLUSION",
+        "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insuranc..."
       },
       "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0035",
-        "DEP-0043"
+        "DEP-0009",
+        "DEP-0036"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0004"
@@ -112,25 +112,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_declarations_1_847e9332",
-          "element_type": "DEFINITION",
-          "element_text": "Named Insured: ABC Corporation..."
+          "element_id": "element_section_i_1_672f4202",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages...."
         },
         {
-          "element_id": "element_section_iii_0_3adaedc4",
-          "element_type": "DEFINITION",
-          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+          "element_id": "element_section_ii_0_1e3fe4aa",
+          "element_type": "EXCLUSION",
+          "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
         }
       ],
       "target_element": {
-        "element_id": "element_endorsement_2_b4476c08",
-        "element_type": "COVERAGE_GRANT",
-        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+        "element_id": "element_section_i_2_8b8e7a64",
+        "element_type": "EXCLUSION",
+        "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insuranc..."
       },
-      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0013",
-        "DEP-0036"
+        "DEP-0010",
+        "DEP-0027"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0005"
@@ -139,25 +139,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_endorsement_1_6ed95c4b",
-          "element_type": "Definitions",
-          "element_text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company..."
+          "element_id": "element_section_i_1_672f4202",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages...."
         },
         {
-          "element_id": "element_section_iii_0_3adaedc4",
-          "element_type": "DEFINITION",
-          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+          "element_id": "element_section_ii_1_e823d709",
+          "element_type": "EXCLUSION",
+          "element_text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability ..."
         }
       ],
       "target_element": {
-        "element_id": "element_endorsement_2_b4476c08",
-        "element_type": "COVERAGE_GRANT",
-        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+        "element_id": "element_section_i_2_8b8e7a64",
+        "element_type": "EXCLUSION",
+        "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insuranc..."
       },
-      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0018",
-        "DEP-0036"
+        "DEP-0010",
+        "DEP-0030"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0006"
@@ -166,25 +166,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_section_iii_0_3adaedc4",
-          "element_type": "DEFINITION",
-          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+          "element_id": "element_section_i_1_672f4202",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages...."
         },
         {
-          "element_id": "element_section_iv_0_dc338854",
-          "element_type": "CONDITION",
-          "element_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy...."
+          "element_id": "element_section_iii_1_09608b63",
+          "element_type": "DEFINITION",
+          "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible ..."
         }
       ],
       "target_element": {
-        "element_id": "element_endorsement_2_b4476c08",
-        "element_type": "COVERAGE_GRANT",
-        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
+        "element_id": "element_section_i_2_8b8e7a64",
+        "element_type": "EXCLUSION",
+        "element_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insuranc..."
       },
       "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0036",
-        "DEP-0044"
+        "DEP-0010",
+        "DEP-0036"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0007"
@@ -193,25 +193,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_section_i_0_a093bc53",
-          "element_type": "COVERAGE_GRANT",
-          "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insu..."
+          "element_id": "element_declarations_1_89f45e60",
+          "element_type": "Definitions",
+          "element_text": "Named Insured: ABC Corporation..."
         },
         {
-          "element_id": "element_section_iii_0_3adaedc4",
+          "element_id": "element_section_iii_0_7622e2f9",
           "element_type": "DEFINITION",
           "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
         }
       ],
       "target_element": {
-        "element_id": "element_section_ii_0_05dda4fa",
-        "element_type": "EXCLUSION",
-        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+        "element_id": "element_endorsement_0_2f64c0f7",
+        "element_type": "COVERAGE_GRANT",
+        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
       },
       "description": "Conflicting dependencies: requires vs restricts on same target",
       "dependency_ids": [
-        "DEP-0023",
-        "DEP-0037"
+        "DEP-0013",
+        "DEP-0032"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0008"
@@ -220,25 +220,25 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_section_ii_1_794b815b",
-          "element_type": "EXCLUSION",
-          "element_text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability ..."
-        },
-        {
-          "element_id": "element_section_iii_0_3adaedc4",
+          "element_id": "element_section_iii_0_7622e2f9",
           "element_type": "DEFINITION",
           "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        },
+        {
+          "element_id": "element_section_iv_0_abd95de3",
+          "element_type": "CONDITION",
+          "element_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy...."
         }
       ],
       "target_element": {
-        "element_id": "element_section_ii_0_05dda4fa",
-        "element_type": "EXCLUSION",
-        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+        "element_id": "element_endorsement_0_2f64c0f7",
+        "element_type": "COVERAGE_GRANT",
+        "element_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule...."
       },
-      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0034",
-        "DEP-0037"
+        "DEP-0032",
+        "DEP-0039"
       ],
       "severity": 0.8,
       "conflict_id": "CONFLICT-0009"
@@ -247,32 +247,86 @@
       "conflict_type": "condition_exclusion_conflict",
       "conflicting_elements": [
         {
-          "element_id": "element_section_iii_0_3adaedc4",
+          "element_id": "element_section_i_0_22d23c4d",
+          "element_type": "COVERAGE_GRANT",
+          "element_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insu..."
+        },
+        {
+          "element_id": "element_section_iii_0_7622e2f9",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_section_ii_0_1e3fe4aa",
+        "element_type": "EXCLUSION",
+        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0021",
+        "DEP-0033"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0010"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_ii_1_e823d709",
+          "element_type": "EXCLUSION",
+          "element_text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability ..."
+        },
+        {
+          "element_id": "element_section_iii_0_7622e2f9",
+          "element_type": "DEFINITION",
+          "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
+        }
+      ],
+      "target_element": {
+        "element_id": "element_section_ii_0_1e3fe4aa",
+        "element_type": "EXCLUSION",
+        "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
+      },
+      "description": "Conflicting dependencies: requires vs restricts on same target",
+      "dependency_ids": [
+        "DEP-0031",
+        "DEP-0033"
+      ],
+      "severity": 0.8,
+      "conflict_id": "CONFLICT-0011"
+    },
+    {
+      "conflict_type": "condition_exclusion_conflict",
+      "conflicting_elements": [
+        {
+          "element_id": "element_section_iii_0_7622e2f9",
           "element_type": "DEFINITION",
           "element_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time...."
         },
         {
-          "element_id": "element_section_iii_1_5b2deabf",
+          "element_id": "element_section_iii_1_09608b63",
           "element_type": "DEFINITION",
           "element_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible ..."
         }
       ],
       "target_element": {
-        "element_id": "element_section_ii_0_05dda4fa",
+        "element_id": "element_section_ii_0_1e3fe4aa",
         "element_type": "EXCLUSION",
         "element_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured...."
       },
       "description": "Conflicting dependencies: restricts vs requires on same target",
       "dependency_ids": [
-        "DEP-0037",
-        "DEP-0041"
+        "DEP-0033",
+        "DEP-0037"
       ],
       "severity": 0.8,
-      "conflict_id": "CONFLICT-0010"
+      "conflict_id": "CONFLICT-0012"
     }
   ],
   "conflict_type_counts": {
-    "condition_exclusion_conflict": 10
+    "condition_exclusion_conflict": 12
   },
-  "total_conflicts": 10
+  "total_conflicts": 12
 }

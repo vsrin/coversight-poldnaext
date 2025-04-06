@@ -1,0 +1,320 @@
+{
+  "element_declarations_0_423ef786": {
+    "element_id": "element_declarations_0_423ef786",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_declarations_1_89f45e60": {
+    "element_id": "element_declarations_1_89f45e60",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_declarations_2_eba95069": {
+    "element_id": "element_declarations_2_eba95069",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_declarations_3_ca99769a": {
+    "element_id": "element_declarations_3_ca99769a",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_endorsement_0_2f64c0f7": {
+    "element_id": "element_endorsement_0_2f64c0f7",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_i_0_22d23c4d": {
+    "element_id": "element_section_i_0_22d23c4d",
+    "primary_mapping": {
+      "code": "AUTO.LIAB",
+      "confidence": 0.32000000000000006
+    },
+    "all_mappings": [
+      {
+        "code": "AUTO.LIAB",
+        "confidence": 0.32000000000000006
+      },
+      {
+        "code": "LIAB.GL",
+        "confidence": 0.26666666666666666
+      }
+    ],
+    "rule_contributions": {
+      "Keyword Match": [
+        {
+          "code": "AUTO.LIAB",
+          "confidence": 0.32000000000000006
+        },
+        {
+          "code": "LIAB.GL",
+          "confidence": 0.26666666666666666
+        }
+      ],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_i_1_672f4202": {
+    "element_id": "element_section_i_1_672f4202",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_i_2_8b8e7a64": {
+    "element_id": "element_section_i_2_8b8e7a64",
+    "primary_mapping": {
+      "code": "AUTO.LIAB",
+      "confidence": 0.32000000000000006
+    },
+    "all_mappings": [
+      {
+        "code": "AUTO.LIAB",
+        "confidence": 0.32000000000000006
+      },
+      {
+        "code": "LIAB.GL",
+        "confidence": 0.26666666666666666
+      }
+    ],
+    "rule_contributions": {
+      "Keyword Match": [
+        {
+          "code": "AUTO.LIAB",
+          "confidence": 0.32000000000000006
+        },
+        {
+          "code": "LIAB.GL",
+          "confidence": 0.26666666666666666
+        }
+      ],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_ii_0_1e3fe4aa": {
+    "element_id": "element_section_ii_0_1e3fe4aa",
+    "primary_mapping": {
+      "code": "AUTO.LIAB",
+      "confidence": 0.32000000000000006
+    },
+    "all_mappings": [
+      {
+        "code": "AUTO.LIAB",
+        "confidence": 0.32000000000000006
+      },
+      {
+        "code": "LIAB.GL",
+        "confidence": 0.26666666666666666
+      }
+    ],
+    "rule_contributions": {
+      "Keyword Match": [
+        {
+          "code": "AUTO.LIAB",
+          "confidence": 0.32000000000000006
+        },
+        {
+          "code": "LIAB.GL",
+          "confidence": 0.26666666666666666
+        }
+      ],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_ii_1_e823d709": {
+    "element_id": "element_section_ii_1_e823d709",
+    "primary_mapping": {
+      "code": "AUTO.LIAB",
+      "confidence": 0.32000000000000006
+    },
+    "all_mappings": [
+      {
+        "code": "AUTO.LIAB",
+        "confidence": 0.32000000000000006
+      },
+      {
+        "code": "LIAB.GL",
+        "confidence": 0.26666666666666666
+      }
+    ],
+    "rule_contributions": {
+      "Keyword Match": [
+        {
+          "code": "AUTO.LIAB",
+          "confidence": 0.32000000000000006
+        },
+        {
+          "code": "LIAB.GL",
+          "confidence": 0.26666666666666666
+        }
+      ],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_iii_0_7622e2f9": {
+    "element_id": "element_section_iii_0_7622e2f9",
+    "primary_mapping": {
+      "code": "AUTO.LIAB",
+      "confidence": 0.16000000000000003
+    },
+    "all_mappings": [
+      {
+        "code": "AUTO.LIAB",
+        "confidence": 0.16000000000000003
+      },
+      {
+        "code": "LIAB.GL",
+        "confidence": 0.13333333333333333
+      }
+    ],
+    "rule_contributions": {
+      "Keyword Match": [
+        {
+          "code": "AUTO.LIAB",
+          "confidence": 0.16000000000000003
+        },
+        {
+          "code": "LIAB.GL",
+          "confidence": 0.13333333333333333
+        }
+      ],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_iii_1_09608b63": {
+    "element_id": "element_section_iii_1_09608b63",
+    "primary_mapping": {
+      "code": "AUTO.LIAB",
+      "confidence": 0.16000000000000003
+    },
+    "all_mappings": [
+      {
+        "code": "AUTO.LIAB",
+        "confidence": 0.16000000000000003
+      },
+      {
+        "code": "LIAB.GL",
+        "confidence": 0.13333333333333333
+      }
+    ],
+    "rule_contributions": {
+      "Keyword Match": [
+        {
+          "code": "AUTO.LIAB",
+          "confidence": 0.16000000000000003
+        },
+        {
+          "code": "LIAB.GL",
+          "confidence": 0.13333333333333333
+        }
+      ],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_iv_0_abd95de3": {
+    "element_id": "element_section_iv_0_abd95de3",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  },
+  "element_section_iv_1_18966dc4": {
+    "element_id": "element_section_iv_1_18966dc4",
+    "primary_mapping": {
+      "code": null,
+      "confidence": 0.0
+    },
+    "all_mappings": [],
+    "rule_contributions": {
+      "Keyword Match": [],
+      "Element Type": [],
+      "Section Context": [],
+      "Title Match": [],
+      "Exclusion Pattern": []
+    }
+  }
+}

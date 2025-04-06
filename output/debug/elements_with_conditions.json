@@ -2,12 +2,23 @@
   {
     "text": "Policy Number: TEST-12345",
     "type": "DEFINITION",
-    "metadata": {},
-    "id": "element_declarations_0_ad81e498",
+    "subtype": "Policy Number",
+    "metadata": {
+      "has_monetary_value": false,
+      "monetary_values": [],
+      "contains_reference": false,
+      "references": [],
+      "contains_condition": false,
+      "conditions": []
+    },
+    "id": "element_declarations_0_423ef786",
     "section_id": "declarations",
     "parent_element_id": null,
-    "child_element_ids": [],
-    "subtype": "Policy Number",
+    "child_element_ids": [
+      "element_declarations_1_89f45e60",
+      "element_declarations_2_eba95069",
+      "element_declarations_3_ca99769a"
+    ],
     "confidence": 0.9,
     "explanation": "The element defines the term 'Policy Number' used in the policy.",
     "keywords": [
@@ -22,42 +33,58 @@
         "trigger_events": [],
         "temporal_conditions": "N/A",
         "spatial_conditions": "N/A",
-        "actor_obligations": "Insurer must use this number to reference the policy in all communications and transactions."
+        "actor_obligations": "Insurance company must assign a unique Policy Number to each policy issued."
       },
       "intent_confidence": 0.9
     },
     "conditional_analysis": {
-      "conditions": [],
+      "conditions": [
+        {
+          "condition_text": "Policy Number: TEST-12345",
+          "condition_type": "PREREQUISITE",
+          "effect": "Coverage applies only if this policy number is specified",
+          "applies_to": "Policy coverage",
+          "consequence": "Coverage may not apply if the policy number is not TEST-12345"
+        }
+      ],
       "has_complex_conditions": false,
-      "condition_count": 0,
-      "confidence": 1
+      "condition_count": 1,
+      "confidence": 0.95
     }
   },
   {
     "text": "Named Insured: ABC Corporation",
-    "type": "DEFINITION",
-    "metadata": {},
-    "id": "element_declarations_1_847e9332",
+    "type": "Definitions",
+    "subtype": "Policyholder Identification",
+    "metadata": {
+      "has_monetary_value": false,
+      "monetary_values": [],
+      "contains_reference": false,
+      "references": [],
+      "contains_condition": false,
+      "conditions": []
+    },
+    "id": "element_declarations_1_89f45e60",
     "section_id": "declarations",
-    "parent_element_id": null,
+    "parent_element_id": "element_declarations_0_423ef786",
     "child_element_ids": [],
-    "subtype": "Named Insured",
     "confidence": 0.95,
-    "explanation": "The element defines the term 'Named Insured' as ABC Corporation, specifying who is covered under the policy.",
+    "explanation": "The element identifies the named insured, which is the entity or person covered by the insurance policy. (Corrected invalid type)",
     "keywords": [
-      "Named Insured",
       "ABC Corporation"
     ],
-    "function": "Identifying the entity or individual that is the primary insured party under the policy.",
+    "function": "To specify the entity or person that is the primary insured party under the policy.",
     "intent_analysis": {
-      "intent_summary": "This element identifies ABC Corporation as the named insured on the insurance policy.",
+      "intent_summary": "This element identifies the named insured as ABC Corporation.",
       "coverage_effect": "GRANTS_COVERAGE",
       "intent_details": {
-        "what_is_covered": "ABC Corporation as the insured party",
-        "trigger_events": [],
+        "what_is_covered": "N/A",
+        "trigger_events": [
+          "Policy inception"
+        ],
         "temporal_conditions": "Applies for the duration of the policy term",
         "spatial_conditions": "N/A",
-        "actor_obligations": "ABC Corporation must comply with the terms and conditions of the policy"
+        "actor_obligations": "ABC Corporation must comply with all policy terms and conditions"
       },
       "intent_confidence": 0.9
     },
@@ -68,7 +95,7 @@
           "condition_type": "PREREQUISITE",
           "effect": "Coverage applies only to ABC Corporation",
           "applies_to": "Named Insured",
-          "consequence": "Coverage does not apply if the named insured is not ABC Corporation"
+          "consequence": "Coverage does not apply if named insured is not ABC Corporation"
         }
       ],
       "has_complex_conditions": false,
@@ -80,36 +107,43 @@
     "text": "Policy Period: 01/01/2025 to 01/01/2026",
     "type": "TIME_ELEMENT",
     "subtype": "Policy Period",
-    "metadata": {},
-    "id": "element_declarations_2_54df392d",
+    "metadata": {
+      "has_monetary_value": false,
+      "monetary_values": [],
+      "contains_reference": false,
+      "references": [],
+      "contains_condition": true,
+      "conditions": [
+        "01/01/2025 to 01/01/2026"
+      ]
+    },
+    "id": "element_declarations_2_eba95069",
     "section_id": "declarations",
-    "parent_element_id": null,
+    "parent_element_id": "element_declarations_0_423ef786",
     "child_element_ids": [],
     "confidence": 0.95,
     "explanation": "The element establishes the specific time period during which the policy is in effect, indicating the start and end dates.",
     "keywords": [
       "Policy Period"
     ],
-    "function": "Defines the duration of coverage provided by the insurance policy.",
+    "function": "Defines the duration of coverage provided by the insurance policy",
     "intent_analysis": {
       "intent_summary": "This element defines the time period during which the insurance policy is in effect.",
       "coverage_effect": "DEFINES_TERM",
       "intent_details": {
-        "temporal_conditions": "The policy is effective from January 1, 2025, to January 1, 2026.",
-        "trigger_events": [],
-        "spatial_conditions": "",
-        "actor_obligations": ""
+        "temporal_conditions": "Coverage is only applicable between 01/01/2025 and 01/01/2026",
+        "actor_obligations": "Policyholder must ensure any claims or incidents fall within this time frame"
       },
-      "intent_confidence": 0.95
+      "intent_confidence": 0.9
     },
     "conditional_analysis": {
       "conditions": [
         {
           "condition_text": "Policy Period: 01/01/2025 to 01/01/2026",
           "condition_type": "TIMING",
-          "effect": "Defines the time period during which the policy is in effect",
+          "effect": "Defines the specific time period during which the policy is in effect",
           "applies_to": "Coverage under the insurance policy",
-          "consequence": "Coverage only applies between the specified dates"
+          "consequence": "Coverage is only applicable between the specified dates"
         }
       ],
       "has_complex_conditions": false,
@@ -125,132 +159,45 @@
       "has_monetary_value": true,
       "monetary_values": [
         "$1,000,000"
-      ]
+      ],
+      "contains_reference": false,
+      "references": [],
+      "contains_condition": false,
+      "conditions": []
     },
-    "id": "element_declarations_3_cbe6ec19",
+    "id": "element_declarations_3_ca99769a",
     "section_id": "declarations",
-    "parent_element_id": null,
+    "parent_element_id": "element_declarations_0_423ef786",
     "child_element_ids": [],
-    "confidence": 0.9,
-    "explanation": "This element specifies a specific monetary limit of $1,000,000 for each occurrence, which is a sub-limit within the broader coverage provided by the policy.",
+    "confidence": 0.95,
+    "explanation": "This element specifies a sub-limit of $1,000,000 for each occurrence within the broader coverage.",
     "keywords": [
-      "$1,000,000",
+      "Limits of Insurance",
       "Each Occurrence"
     ],
-    "function": "To establish the maximum amount of coverage available for each individual occurrence of a covered loss.",
+    "function": "To establish the maximum amount the insurer will pay for each separate occurrence of a covered loss.",
     "intent_analysis": {
       "intent_summary": "This element sets the monetary limit of insurance coverage for each occurrence to $1,000,000.",
       "coverage_effect": "LIMITS_COVERAGE",
       "intent_details": {
         "what_is_covered": "N/A",
         "trigger_events": [
-          "Occurrence of an event triggering insurance coverage"
+          "Occurrence triggering insurance claim"
         ],
-        "temporal_conditions": "Coverage applies to each separate occurrence",
+        "temporal_conditions": "N/A",
         "spatial_conditions": "N/A",
         "actor_obligations": "N/A"
-      },
-      "intent_confidence": 0.85
-    },
-    "conditional_analysis": {
-      "conditions": [
-        {
-          "condition_text": "$1,000,000 Each Occurrence",
-          "condition_type": "LIMITATION",
-          "effect": "Limits the coverage to $1,000,000 per occurrence",
-          "applies_to": "Each occurrence",
-          "consequence": "Coverage is limited to $1,000,000 for each separate incident"
-        }
-      ],
-      "has_complex_conditions": false,
-      "condition_count": 1,
-      "confidence": 0.95
-    }
-  },
-  {
-    "text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVERAGE PART",
-    "type": "CONDITION",
-    "subtype": "Modification of Coverage",
-    "metadata": {},
-    "id": "element_endorsement_0_b9a8a57e",
-    "section_id": "endorsement",
-    "parent_element_id": null,
-    "child_element_ids": [
-      "element_endorsement_1_6ed95c4b"
-    ],
-    "confidence": 0.85,
-    "explanation": "This endorsement modifies the coverage provided under the Commercial General Liability Coverage Part, indicating a condition that alters the scope of coverage.",
-    "keywords": [
-      "endorsement",
-      "modifies",
-      "insurance",
-      "coverage",
-      "commercial general liability"
-    ],
-    "function": "To specify the changes or modifications to the insurance coverage provided under the Commercial General Liability Coverage Part.",
-    "intent_analysis": {
-      "intent_summary": "This element modifies the insurance coverage provided under the Commercial General Liability Coverage Part.",
-      "coverage_effect": "MODIFIES_COVERAGE",
-      "intent_details": {
-        "what_is_covered": "Insurance coverage provided under the Commercial General Liability Coverage Part",
-        "trigger_events": [],
-        "temporal_conditions": "",
-        "spatial_conditions": "",
-        "actor_obligations": ""
-      },
-      "intent_confidence": 0.85
-    },
-    "conditional_analysis": {
-      "conditions": [
-        {
-          "condition_text": "This endorsement modifies insurance provided under the following: COMMERCIAL GENERAL LIABILITY COVERAGE PART",
-          "condition_type": "PREREQUISITE",
-          "effect": "Modifies the insurance coverage provided",
-          "applies_to": "COMMERCIAL GENERAL LIABILITY COVERAGE PART",
-          "consequence": "Coverage will only be provided as modified by this endorsement"
-        }
-      ],
-      "has_complex_conditions": false,
-      "condition_count": 1,
-      "confidence": 0.95
-    }
-  },
-  {
-    "text": "SCHEDULE Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
-    "type": "Definitions",
-    "subtype": "ADDITIONAL INSURED",
-    "metadata": {},
-    "id": "element_endorsement_1_6ed95c4b",
-    "section_id": "endorsement",
-    "parent_element_id": "element_endorsement_0_b9a8a57e",
-    "child_element_ids": [],
-    "confidence": 0.9,
-    "explanation": "The element specifies the addition of XYZ Partner Company as an additional insured party, extending coverage to them. (Corrected invalid type)",
-    "keywords": [
-      "Additional Insured",
-      "XYZ Partner Company"
-    ],
-    "function": "To extend coverage to a specific entity beyond the named insured",
-    "intent_analysis": {
-      "intent_summary": "This element designates XYZ Partner Company as an additional insured party under the insurance policy.",
-      "coverage_effect": "GRANTS_COVERAGE",
-      "intent_details": {
-        "what_is_covered": "Liability coverage for XYZ Partner Company",
-        "trigger_events": [],
-        "temporal_conditions": "Coverage applies for the duration of the policy term",
-        "spatial_conditions": "Coverage applies wherever the policy is valid",
-        "actor_obligations": "XYZ Partner Company must meet any requirements specified in the policy for coverage to apply"
       },
       "intent_confidence": 0.9
     },
     "conditional_analysis": {
       "conditions": [
         {
-          "condition_text": "Name of Additional Insured Person(s) Or Organization(s): XYZ Partner Company",
-          "condition_type": "PREREQUISITE",
-          "effect": "Must be named as an additional insured for coverage to apply",
-          "applies_to": "Coverage for XYZ Partner Company",
-          "consequence": "Coverage will not apply if XYZ Partner Company is not named as an additional insured"
+          "condition_text": "Each Occurrence",
+          "condition_type": "LIMITATION",
+          "effect": "Limits the coverage to $1,000,000 per occurrence",
+          "applies_to": "Limits of Insurance",
+          "consequence": "Coverage is restricted to $1,000,000 for each separate occurrence"
         }
       ],
       "has_complex_conditions": false,
@@ -262,8 +209,15 @@
     "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
     "type": "COVERAGE_GRANT",
     "subtype": "Additional Insured Endorsement",
-    "metadata": {},
-    "id": "element_endorsement_2_b4476c08",
+    "metadata": {
+      "has_monetary_value": false,
+      "monetary_values": [],
+      "contains_reference": false,
+      "references": [],
+      "contains_condition": false,
+      "conditions": []
+    },
+    "id": "element_endorsement_0_2f64c0f7",
     "section_id": "endorsement",
     "parent_element_id": null,
     "child_element_ids": [],
@@ -273,13 +227,7 @@
       "additional insured",
       "endorsement"
     ],
-    "function": "This element specifies that certain persons or organizations listed in the Schedule are considered insured under the policy.",
-    "references": [
-      {
-        "target_id": "element_endorsement_1_6ed95c4b",
-        "explanation": "The COVERAGE_GRANT element refers to the Definitions element by mentioning the additional insured person(s) or organization(s) shown in the Schedule."
-      }
-    ],
+    "function": "This element modifies Section II of the policy to extend coverage to additional insured parties listed in the Schedule.",
     "intent_analysis": {
       "intent_summary": "This element extends coverage to additional insured persons or organizations listed in the Schedule.",
       "coverage_effect": "GRANTS_COVERAGE",
@@ -287,8 +235,8 @@
         "what_is_covered": "Additional insured persons or organizations listed in the Schedule",
         "trigger_events": [],
         "temporal_conditions": "Coverage applies as long as the additional insured status is in effect",
-        "spatial_conditions": "N/A",
-        "actor_obligations": "The insurer must recognize the additional insured status as per the Schedule"
+        "spatial_conditions": "Coverage applies wherever the policy is valid",
+        "actor_obligations": "The insurer must provide coverage to the additional insured as specified in the policy"
       },
       "intent_confidence": 0.85
     },
@@ -299,7 +247,7 @@
           "condition_type": "PREREQUISITE",
           "effect": "Expands coverage to include additional insured parties",
           "applies_to": "Section II \u2013 Who Is An Insured",
-          "consequence": "Coverage applies to the additional insured parties listed in the Schedule"
+          "consequence": "Coverage applies only to those listed in the Schedule"
         }
       ],
       "has_complex_conditions": false,
@@ -310,30 +258,21 @@
   {
     "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
     "type": "COVERAGE_GRANT",
-    "subtype": "Damages Coverage",
-    "metadata": {
-      "has_monetary_value": false,
-      "monetary_values": [],
-      "contains_reference": false,
-      "references": [],
-      "contains_condition": false,
-      "conditions": []
-    },
-    "id": "element_section_i_0_a093bc53",
+    "id": "element_section_i_0_22d23c4d",
     "section_id": "section_i",
     "parent_element_id": null,
     "child_element_ids": [
-      "element_section_i_1_80663102",
-      "element_section_i_2_40941b60"
+      "element_section_i_1_672f4202"
     ],
+    "subtype": "Damages Coverage",
     "confidence": 0.95,
-    "explanation": "The element provides coverage for damages that the insured becomes legally obligated to pay due to bodily injury or property damage.",
+    "explanation": "The element provides coverage for damages the insured becomes legally obligated to pay due to bodily injury or property damage.",
     "keywords": [
       "damages",
       "bodily injury",
       "property damage"
     ],
-    "function": "To specify the scope of coverage provided by the insurance policy in terms of liability for bodily injury or property damage.",
+    "function": "Specifies the scope of coverage provided by the insurance policy in terms of liability for bodily injury or property damage.",
     "intent_analysis": {
       "intent_summary": "Promises to pay for covered damages or losses",
       "coverage_effect": "GRANTS_COVERAGE",
@@ -351,9 +290,9 @@
         {
           "condition_text": "the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies",
           "condition_type": "PREREQUISITE",
-          "effect": "Coverage only applies if the insured becomes legally obligated to pay as damages for bodily injury or property damage",
-          "applies_to": "Coverage under the insurance policy",
-          "consequence": "Coverage is triggered when the insured is legally obligated to pay for bodily injury or property damage"
+          "effect": "Coverage applies only if the insured becomes legally obligated to pay damages for bodily injury or property damage covered by this insurance",
+          "applies_to": "Coverage",
+          "consequence": "Coverage applies when the insured is legally obligated to pay for bodily injury or property damage"
         }
       ],
       "has_complex_conditions": false,
@@ -363,37 +302,34 @@
   },
   {
     "text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
-    "type": "CONDITION",
-    "subtype": "Duty to defend",
-    "metadata": {
-      "has_monetary_value": false,
-      "monetary_values": [],
-      "contains_reference": false,
-      "references": [],
-      "contains_condition": false,
-      "conditions": []
-    },
-    "id": "element_section_i_1_80663102",
+    "type": "COVERAGE_GRANT",
+    "id": "element_section_i_1_672f4202",
     "section_id": "section_i",
-    "parent_element_id": "element_section_i_0_a093bc53",
+    "parent_element_id": "element_section_i_0_22d23c4d",
     "child_element_ids": [],
-    "confidence": 0.95,
-    "explanation": "This element establishes a requirement for the insurer to defend the insured in case of a suit seeking damages.",
+    "subtype": "Duty to defend",
+    "confidence": 0.9,
+    "explanation": "This element provides coverage by granting the insurer the right and duty to defend the insured in case of a 'suit' seeking damages.",
     "keywords": [
+      "right",
+      "duty",
       "defend",
       "insured",
       "suit",
       "damages"
     ],
-    "function": "Specifies the insurer's obligation to provide legal defense for the insured in certain situations.",
+    "function": "To ensure that the insured is provided with legal defense in case of a lawsuit seeking damages.",
     "intent_analysis": {
-      "intent_summary": "The insurance company has the right and duty to defend the insured in any legal action seeking damages.",
-      "coverage_effect": "IMPOSES_OBLIGATION",
+      "intent_summary": "This element grants the insurance company the right and duty to defend the insured in any legal action seeking damages.",
+      "coverage_effect": "GRANTS_COVERAGE",
       "intent_details": {
+        "what_is_covered": "Legal defense costs for the insured in a lawsuit seeking damages",
         "trigger_events": [
-          "Legal 'suit' seeking damages"
+          "Filing of a 'suit' seeking damages"
         ],
-        "actor_obligations": "The insurance company must defend the insured in such legal actions."
+        "temporal_conditions": "Applies when a 'suit' is initiated",
+        "spatial_conditions": "Not applicable",
+        "actor_obligations": "The insurance company has the obligation to defend the insured"
       },
       "intent_confidence": 0.85
     },
@@ -402,9 +338,9 @@
         {
           "condition_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
           "condition_type": "PREREQUISITE",
-          "effect": "Modifies coverage by specifying the insurer's duty to defend the insured in a lawsuit seeking damages",
-          "applies_to": "Defense coverage",
-          "consequence": "Coverage applies only if the insurer has the right and duty to defend the insured"
+          "effect": "Requires the insurer to defend the insured in any lawsuit seeking damages",
+          "applies_to": "Coverage for defense in lawsuits",
+          "consequence": "Coverage applies only if the insurer has the right and duty to defend"
         }
       ],
       "has_complex_conditions": false,
@@ -414,40 +350,38 @@
   },
   {
     "text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply.",
-    "type": "CONDITION",
-    "subtype": "Duty to defend",
-    "metadata": {
-      "has_monetary_value": false,
-      "monetary_values": [],
-      "contains_reference": false,
-      "references": [],
-      "contains_condition": false,
-      "conditions": []
-    },
-    "id": "element_section_i_2_40941b60",
+    "type": "EXCLUSION",
+    "id": "element_section_i_2_8b8e7a64",
     "section_id": "section_i",
-    "parent_element_id": "element_section_i_0_a093bc53",
+    "parent_element_id": null,
     "child_element_ids": [],
-    "confidence": 0.95,
-    "explanation": "This element establishes a requirement for the insurer to defend the insured only for damages that fall within the scope of coverage provided by the policy.",
+    "subtype": "Defense Exclusion",
+    "confidence": 0.9,
+    "explanation": "This element explicitly states that the insurer has no duty to defend the insured in certain situations, which falls under the category of exclusions.",
     "keywords": [
       "duty to defend",
       "suit",
       "bodily injury",
       "property damage"
     ],
-    "function": "Establishes the conditions under which the insurer is obligated to defend the insured in legal actions related to covered damages.",
+    "function": "Excludes coverage for defending the insured in certain situations where the insurance does not apply",
+    "dependencies": [
+      {
+        "dependency_id": "element_section_i_0_22d23c4d",
+        "explanation": "The Exclusion element's application depends on the Coverage Grant element"
+      }
+    ],
     "intent_analysis": {
-      "intent_summary": "This element states that the insurance company has no obligation to defend the insured in a lawsuit seeking damages for bodily injury or property damage that is not covered by the insurance policy.",
-      "coverage_effect": "LIMITS_COVERAGE",
+      "intent_summary": "This element excludes the insurance company's duty to defend the insured in lawsuits seeking damages for bodily injury or property damage not covered by the insurance policy.",
+      "coverage_effect": "EXCLUDES_COVERAGE",
       "intent_details": {
         "what_is_covered": "N/A",
         "trigger_events": [
-          "'Suit' seeking damages for 'bodily injury' or 'property damage'"
+          "'Suit' seeking damages for 'bodily injury' or 'property damage' not covered by the policy"
         ],
         "temporal_conditions": "N/A",
         "spatial_conditions": "N/A",
-        "actor_obligations": "The insurance company is not obligated to defend the insured in lawsuits for damages not covered by the policy."
+        "actor_obligations": "The insurance company has no duty to defend the insured in such lawsuits."
       },
       "intent_confidence": 0.85
     },
@@ -478,19 +412,19 @@
       "contains_condition": false,
       "conditions": []
     },
-    "id": "element_section_ii_0_05dda4fa",
+    "id": "element_section_ii_0_1e3fe4aa",
     "section_id": "section_ii",
     "parent_element_id": null,
     "child_element_ids": [],
     "confidence": 0.95,
     "explanation": "The element explicitly removes coverage for bodily injury or property damage that is expected or intended by the insured.",
     "keywords": [
-      "expected",
-      "intended",
-      "injury",
-      "property damage"
+      "Expected",
+      "Intended",
+      "Injury",
+      "Property Damage"
     ],
-    "function": "To exclude coverage for situations where the insured intentionally causes bodily injury or property damage.",
+    "function": "To exclude coverage for intentional harm caused by the insured.",
     "intent_analysis": {
       "intent_summary": "This element excludes coverage for bodily injury or property damage that is expected or intended by the insured.",
       "coverage_effect": "EXCLUDES_COVERAGE",
@@ -521,7 +455,7 @@
   {
     "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
     "type": "EXCLUSION",
-    "subtype": "Contractual Liability",
+    "subtype": "Contractual Liability Exclusion",
     "metadata": {
       "has_monetary_value": false,
       "monetary_values": [],
@@ -530,20 +464,20 @@
       "contains_condition": false,
       "conditions": []
     },
-    "id": "element_section_ii_1_794b815b",
+    "id": "element_section_ii_1_e823d709",
     "section_id": "section_ii",
     "parent_element_id": null,
     "child_element_ids": [],
     "confidence": 0.9,
-    "explanation": "The element explicitly removes coverage for bodily injury or property damage arising from contractual liability assumed by the insured.",
+    "explanation": "The element explicitly removes coverage for bodily injury or property damage arising from assumed liability in a contract or agreement.",
     "keywords": [
-      "contractual liability",
-      "bodily injury",
-      "property damage"
+      "Contractual Liability",
+      "Bodily injury",
+      "Property damage"
     ],
-    "function": "Excludes coverage for liabilities assumed by the insured under contracts or agreements.",
+    "function": "To exclude coverage for liabilities assumed by the insured under contracts or agreements.",
     "intent_analysis": {
-      "intent_summary": "This exclusion pertains to bodily injury or property damage for which the insured is obligated to pay damages due to assuming liability in a contract or agreement.",
+      "intent_summary": "This element excludes coverage for bodily injury or property damage that the insured is obligated to pay damages for due to assuming liability in a contract or agreement.",
       "coverage_effect": "EXCLUDES_COVERAGE",
       "intent_details": {
         "what_is_covered": "N/A",
@@ -552,7 +486,7 @@
         ],
         "temporal_conditions": "N/A",
         "spatial_conditions": "N/A",
-        "actor_obligations": "The insured must be obligated to pay damages by reason of assuming liability in a contract or agreement for this exclusion to apply."
+        "actor_obligations": "The insured must not assume liability in a contract or agreement to avoid this exclusion."
       },
       "intent_confidence": 0.9
     },
@@ -561,9 +495,9 @@
         {
           "condition_text": "\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement",
           "condition_type": "EXCLUSIONARY",
-          "effect": "Removes coverage for bodily injury or property damage resulting from assuming liability in a contract or agreement",
+          "effect": "Limits coverage for bodily injury or property damage arising from contractual liability",
           "applies_to": "Bodily injury or property damage",
-          "consequence": "Coverage is not provided for liabilities assumed in contracts or agreements"
+          "consequence": "Coverage is excluded if the insured assumes liability in a contract or agreement"
         }
       ],
       "has_complex_conditions": false,
@@ -574,7 +508,7 @@
   {
     "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.",
     "type": "DEFINITION",
-    "subtype": "Term Definition",
+    "subtype": "General",
     "metadata": {
       "has_monetary_value": false,
       "monetary_values": [],
@@ -583,19 +517,19 @@
       "contains_condition": false,
       "conditions": []
     },
-    "id": "element_section_iii_0_3adaedc4",
+    "id": "element_section_iii_0_7622e2f9",
     "section_id": "section_iii",
     "parent_element_id": null,
     "child_element_ids": [],
     "confidence": 0.95,
-    "explanation": "The element provides a definition for the term 'Bodily injury' used in the policy.",
+    "explanation": "The element provides a general definition of 'Bodily injury' within the policy.",
     "keywords": [
       "Bodily injury",
       "sickness",
       "disease",
       "death"
     ],
-    "function": "To clarify and specify the scope of coverage related to bodily harm or injury to a person.",
+    "function": "To clarify the scope of bodily injury covered under the policy.",
     "intent_analysis": {
       "intent_summary": "Defines the term 'bodily injury' for interpreting policy coverage",
       "coverage_effect": "DEFINES_TERM",
@@ -610,16 +544,16 @@
         {
           "condition_text": "sickness or disease sustained by a person",
           "condition_type": "LIMITATION",
-          "effect": "Restricts the scope of coverage",
-          "applies_to": "Bodily injury",
-          "consequence": "Coverage is limited to bodily injury caused by sickness or disease sustained by a person"
+          "effect": "Restricts the scope of coverage to bodily injury, sickness, or disease sustained by a person",
+          "applies_to": "Coverage",
+          "consequence": "Coverage only applies to bodily injury, sickness, or disease sustained by a person"
         },
         {
           "condition_text": "death resulting from any of these at any time",
           "condition_type": "LIMITATION",
-          "effect": "Restricts the scope of coverage",
-          "applies_to": "Bodily injury",
-          "consequence": "Coverage is limited to bodily injury resulting in death at any time"
+          "effect": "Restricts the scope of coverage to death resulting from bodily injury, sickness, or disease at any time",
+          "applies_to": "Coverage",
+          "consequence": "Coverage only applies to death resulting from bodily injury, sickness, or disease at any time"
         }
       ],
       "has_complex_conditions": false,
@@ -630,7 +564,7 @@
   {
     "text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured.",
     "type": "DEFINITION",
-    "subtype": "Term Definition",
+    "subtype": "General Definition",
     "metadata": {
       "has_monetary_value": false,
       "monetary_values": [],
@@ -639,16 +573,16 @@
       "contains_condition": false,
       "conditions": []
     },
-    "id": "element_section_iii_1_5b2deabf",
+    "id": "element_section_iii_1_09608b63",
     "section_id": "section_iii",
     "parent_element_id": null,
     "child_element_ids": [],
     "confidence": 0.95,
-    "explanation": "The element provides a definition for the term 'Property damage' used in the policy.",
+    "explanation": "The element 'Property damage' is clearly defining the term for the purposes of the insurance policy.",
     "keywords": [
       "Property damage"
     ],
-    "function": "To clarify the meaning of 'Property damage' for the purpose of the insurance policy.",
+    "function": "To establish the meaning of 'Property damage' within the context of the policy.",
     "intent_analysis": {
       "intent_summary": "This element defines 'property damage' as physical injury to tangible property or loss of use of tangible property that is not physically injured.",
       "coverage_effect": "DEFINES_TERM",
@@ -659,23 +593,23 @@
         "spatial_conditions": "",
         "actor_obligations": ""
       },
-      "intent_confidence": 0.85
+      "intent_confidence": 0.95
     },
     "conditional_analysis": {
       "conditions": [
         {
           "condition_text": "Physical injury to tangible property, including all resulting loss of use of that property",
           "condition_type": "PREREQUISITE",
-          "effect": "Must be met for coverage to apply",
+          "effect": "Limits coverage to cases of physical injury to tangible property",
           "applies_to": "Property damage",
-          "consequence": "Coverage applies if physical injury to tangible property occurs"
+          "consequence": "Coverage applies only if there is physical injury to tangible property"
         },
         {
           "condition_text": "Loss of use of tangible property that is not physically injured",
           "condition_type": "LIMITATION",
-          "effect": "Restricts the scope of coverage",
+          "effect": "Expands coverage to include loss of use of tangible property that is not physically injured",
           "applies_to": "Property damage",
-          "consequence": "Coverage applies only if there is loss of use of tangible property that is not physically injured"
+          "consequence": "Coverage applies to loss of use of tangible property even if not physically injured"
         }
       ],
       "has_complex_conditions": false,
@@ -691,21 +625,21 @@
       "contains_reference": false,
       "contains_condition": false
     },
-    "id": "element_section_iv_0_dc338854",
+    "id": "element_section_iv_0_abd95de3",
     "section_id": "section_iv",
     "parent_element_id": null,
     "child_element_ids": [],
-    "subtype": "General Condition",
+    "subtype": "Bankruptcy or insolvency provision",
     "confidence": 0.95,
-    "explanation": "This element establishes a requirement that the bankruptcy or insolvency of the insured will not relieve the insurer of its obligations under the policy.",
+    "explanation": "This element establishes a condition that the bankruptcy or insolvency of the insured or their estate will not relieve the insurer of their obligations under the policy.",
     "keywords": [
-      "Bankruptcy",
-      "Insolvency",
-      "Obligations"
+      "bankruptcy",
+      "insolvency",
+      "obligations"
     ],
-    "function": "To ensure that the insurer remains obligated to fulfill the terms of the policy even in the event of the insured's bankruptcy or insolvency.",
+    "function": "Ensures that the insurer remains obligated to fulfill the terms of the policy even in the event of the insured's bankruptcy or insolvency.",
     "intent_analysis": {
-      "intent_summary": "This element ensures that the insurance company's obligations under the policy will not be relieved in the event of the insured's bankruptcy or insolvency.",
+      "intent_summary": "This element ensures that the insurance company's obligations under the policy will not be relieved in the event of the insured or the insured's estate declaring bankruptcy or insolvency.",
       "coverage_effect": "GRANTS_COVERAGE",
       "intent_details": {
         "what_is_covered": "Obligations of the insurance company under the policy",
@@ -713,11 +647,11 @@
           "Bankruptcy of the insured",
           "Insolvency of the insured's estate"
         ],
-        "temporal_conditions": "N/A",
+        "temporal_conditions": "At any time during the policy period",
         "spatial_conditions": "N/A",
-        "actor_obligations": "The insurance company must fulfill its obligations under the policy regardless of the insured's bankruptcy or insolvency."
+        "actor_obligations": "N/A"
       },
-      "intent_confidence": 0.85
+      "intent_confidence": 0.9
     },
     "conditional_analysis": {
       "conditions": [
@@ -725,8 +659,8 @@
           "condition_text": "Bankruptcy or insolvency of the insured or of the insured's estate",
           "condition_type": "EXCLUSIONARY",
           "effect": "Removes coverage in case of bankruptcy or insolvency",
-          "applies_to": "This policy",
-          "consequence": "Will not relieve the insurer of their obligations"
+          "applies_to": "The insured or the insured's estate",
+          "consequence": "Will not relieve the insurer of their obligations under the policy"
         }
       ],
       "has_complex_conditions": false,
@@ -746,29 +680,29 @@
         "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim."
       ]
     },
-    "id": "element_section_iv_1_d5263b94",
+    "id": "element_section_iv_1_18966dc4",
     "section_id": "section_iv",
     "parent_element_id": null,
     "child_element_ids": [],
     "confidence": 0.9,
-    "explanation": "This element establishes a requirement for the insured to notify the insurer of an 'occurrence' or offense that may result in a claim, indicating a reporting obligation.",
+    "explanation": "This element establishes a requirement for the insured to notify the insurer of an 'occurrence' or offense that may result in a claim.",
     "keywords": [
       "notification",
       "occurrence",
       "offense",
       "claim"
     ],
-    "function": "To ensure timely reporting of potential claims to the insurer for proper handling and investigation.",
+    "function": "To ensure timely reporting of potential claims to the insurer.",
     "intent_analysis": {
-      "intent_summary": "Policyholder must promptly notify the insurer of any potential claim arising from an occurrence or offense.",
+      "intent_summary": "Policyholder must notify the insurer promptly of any potential claim arising from an occurrence or offense.",
       "coverage_effect": "IMPOSES_OBLIGATION",
       "intent_details": {
         "trigger_events": [
-          "'Occurrence'",
+          "Occurrence",
           "Offense"
         ],
-        "temporal_conditions": "Notification must be made as soon as practicable",
-        "actor_obligations": "Policyholder must notify the insurer promptly"
+        "temporal_conditions": "As soon as practicable",
+        "actor_obligations": "Policyholder must notify insurer"
       },
       "intent_confidence": 0.85
     },
@@ -777,9 +711,9 @@
         {
           "condition_text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
           "condition_type": "REPORTING",
-          "effect": "Requirement for reporting claims or incidents",
+          "effect": "Prerequisite for coverage to apply",
           "applies_to": "Notification of 'occurrence' or offense",
-          "consequence": "Coverage may be affected if not reported promptly"
+          "consequence": "Coverage may be denied if not reported promptly"
         }
       ],
       "has_complex_conditions": false,

@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "policy_number": "Unknown",
+    "insured_name": "Unknown",
+    "effective_date": "Unknown",
+    "expiration_date": "Unknown",
+    "policy_type": "Unknown",
+    "document_title": "Unknown",
+    "document_date": "Unknown",
+    "processing_date": "2025-04-06",
+    "structure_created_at": "2025-04-06T18:27:54.931605"
+  },
+  "error": "Circular reference detected",
+  "elements_count": 14,
+  "mappings_count": 14,
+  "relationships_count": 59
+}

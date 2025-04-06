@@ -216,12 +216,93 @@ def display_relationship_examples(document_map, count=3):
             print(f"    Severity: {conflict.get('severity', 0.0)}")
             print()
 
+# New function to display taxonomy examples
+def display_taxonomy_examples(document_map, count=3):
+    """
+    Display examples of taxonomy mappings and normalized language from the document map.
+    
+    Args:
+        document_map: The processed document map with taxonomy data
+        count: Number of examples to show
+    """
+    # Check if standardized policy structure exists
+    if 'standardized_policy_structure' not in document_map:
+        print("No taxonomy standardization data found.")
+        return
+    
+    policy_structure = document_map['standardized_policy_structure']
+    
+    # Display taxonomy mapping examples
+    taxonomy_mappings = policy_structure.get('taxonomy_mappings', {})
+    if taxonomy_mappings:
+        print("\nExamples of Taxonomy Mappings:")
+        mapped_elements = []
+        
+        # Get elements with mappings
+        elements = policy_structure.get('elements', {})
+        for element_id, mapping in list(taxonomy_mappings.items())[:count]:
+            if element_id in elements:
+                element = elements[element_id]
+                primary_mapping = mapping.get('primary_mapping', {})
+                mapped_elements.append({
+                    'element': element,
+                    'mapping': primary_mapping
+                })
+        
+        # Display mapped elements
+        for i, item in enumerate(mapped_elements):
+            element = item['element']
+            mapping = item['mapping']
+            print(f"  Example {i+1}:")
+            print(f"    Text: {element.get('text', '')[:100]}...")
+            print(f"    Type: {element.get('type', 'Unknown')}")
+            print(f"    Taxonomy Code: {mapping.get('code', 'Unknown')}")
+            print(f"    Confidence: {mapping.get('confidence', 0.0):.2f}")
+            print()
+    
+    # Display normalized language examples
+    normalized_language = policy_structure.get('normalized_language', {})
+    if normalized_language:
+        print("\nExamples of Normalized Language:")
+        for i, (element_id, norm_info) in enumerate(list(normalized_language.items())[:count]):
+            print(f"  Example {i+1}:")
+            if element_id in elements:
+                element = elements[element_id]
+                print(f"    Original Text: {element.get('text', '')[:80]}...")
+                print(f"    Normalized Text: {norm_info.get('normalized_text', '')[:80]}...")
+                print(f"    Source: {norm_info.get('normalization_source', 'Unknown')}")
+                print(f"    Is Unique: {norm_info.get('uniqueness_analysis', {}).get('is_unique', False)}")
+                print()
+    
+    # Display unique provisions if available
+    unique_provisions = []
+    for element_id, norm_info in normalized_language.items():
+        uniqueness_analysis = norm_info.get('uniqueness_analysis', {})
+        if uniqueness_analysis.get('is_unique', False) and element_id in elements:
+            unique_provisions.append({
+                'element': elements[element_id],
+                'uniqueness_score': uniqueness_analysis.get('uniqueness_score', 0.0),
+                'unique_phrases': uniqueness_analysis.get('unique_phrases', [])
+            })
+    
+    if unique_provisions:
+        print("\nExamples of Unique Provisions:")
+        for i, item in enumerate(unique_provisions[:count]):
+            element = item['element']
+            print(f"  Example {i+1}:")
+            print(f"    Text: {element.get('text', '')[:100]}...")
+            print(f"    Type: {element.get('type', 'Unknown')}")
+            print(f"    Uniqueness Score: {item['uniqueness_score']:.2f}")
+            if item['unique_phrases']:
+                print(f"    First Unique Phrase: {item['unique_phrases'][0][:80]}...")
+            print()
+
 def main():
     """Main function to demonstrate the Policy DNA Extractor with modular phase execution."""
     # Set up command-line argument parsing
     parser = argparse.ArgumentParser(description="Demonstrate the Policy DNA Extractor")
     parser.add_argument("--phase", type=int, choices=[1, 2, 3, 4, 5], 
-                        help="Processing phase to run: 1=Document Processing, 2=Element Extraction, 3=Deep Language Analysis, 4=Cross-Reference Mapping, 5=All phases")
+                        help="Processing phase to run: 1=Document Processing, 2=Element Extraction, 3=Deep Language Analysis, 4=Cross-Reference Mapping, 5=Taxonomy Standardization")
     parser.add_argument("--input", type=str, help="Path to input document or previous phase result")
     parser.add_argument("--output-dir", type=str, default="output", help="Directory to save output files")
     args = parser.parse_args()
@@ -271,7 +352,7 @@ def main():
     classified_sections = None
     
     # Phase 1: Document Processing and Segmentation
-    if phase == 1 or phase == 5:
+    if phase == 1 or phase == 0:
         print("\nPhase 1: Document Processing and Segmentation")
         print("--------------------------------------------")
         
@@ -311,7 +392,7 @@ def main():
                     print(f"  - {section_type}: {count}")
     
     # Phase 2: Element Extraction and Classification
-    if phase == 2 or phase == 5:
+    if phase == 2 or phase == 0:
         print("\nPhase 2: Element Extraction and Classification")
         print("--------------------------------------------")
         
@@ -407,7 +488,7 @@ def main():
         display_element_examples(enhanced_document_map, "EXCLUSION")
     
     # Phase 3: Deep Language Analysis
-    if phase == 3 or phase == 5:
+    if phase == 3 or phase == 0:
         print("\nPhase 3: Deep Language Analysis")
         print("-----------------------------")
         
@@ -522,9 +603,9 @@ def main():
             with open(fallback_output, 'w') as f:
                 json.dump(elements_with_terms, f, indent=2)
             print(f"  Saved fallback results to: {fallback_output}")
-    
-    # Phase 4: Cross-Reference and Dependency Mapping
-    if phase == 4 or phase == 5:
+
+            # Phase 4: Cross-Reference and Dependency Mapping
+    if phase == 4 or phase == 0:
         print("\nPhase 4: Cross-Reference and Dependency Mapping")
         print("---------------------------------------------")
         
@@ -616,17 +697,10 @@ def main():
         print(f"Phase 4 results saved to: {phase4_output}")
         result = final_document_map
         
-        # Final output for the complete process
-        final_output = os.path.join(config.output_dir, 'policy_dna_complete.json')
-        with open(final_output, 'w') as f:
-            json.dump(final_document_map, f, indent=2)
-        
-        print(f"Complete Policy DNA saved to: {final_output}")
-        
         # Display relationship examples
         display_relationship_examples(final_document_map)
         
-# Display graph summary
+        # Display graph summary
         print("\nPhase 4 Summary:")
         print(f"  Total references detected: {references.get('total_references', 0)}")
         print(f"  Total dependencies identified: {dependencies.get('total_dependencies', 0)}")
@@ -646,7 +720,7 @@ def main():
         if 'most_referenced' in graph_result and graph_result['most_referenced']:
             print("\nMost Referenced Elements:")
             for i, element in enumerate(graph_result['most_referenced'][:3]):
-                print(f"  {i+1}. {element.get('element_text', '')} ({element.get('reference_count', 0)} references)")
+                print(f"  {i+1}. {element.get('element_text', '')[:50]}... ({element.get('reference_count', 0)} references)")
         
         # Display reference types
         if 'reference_type_counts' in references:
@@ -660,7 +734,252 @@ def main():
             for conflict_type, count in conflicts['conflict_type_counts'].items():
                 print(f"  - {conflict_type}: {count}")
     
+    # Phase 5: Standardization and Taxonomy Mapping (New)
+    if phase == 5 or phase == 0:
+        print("\nPhase 5: Standardization and Taxonomy Mapping")
+        print("------------------------------------------")
+        
+        # Load Phase 4 result if not continuing from Phase 4
+        if phase != 4 and not result:
+            if previous_result:
+                final_document_map = previous_result
+                print("Using provided input file as Phase 4 result.")
+            else:
+                phase4_output = os.path.join(config.output_dir, 'phase4_graph_map.json')
+                if os.path.exists(phase4_output):
+                    with open(phase4_output, 'r') as f:
+                        final_document_map = json.load(f)
+                    print(f"Loaded Phase 4 results from: {phase4_output}")
+                else:
+                    print("Error: Phase 4 results not found. Please run Phase 4 first.")
+                    return
+        else:
+            # Use the result from Phase 4
+            final_document_map = result
+        
+        # Extract elements for mapping
+        elements = final_document_map.get('elements', [])
+        
+        # Step 5.1: Map elements to standardized taxonomy
+        print("Step 5.1: Mapping elements to standardized taxonomy...")
+        try:
+            taxonomy_mapping_results = extractor.taxonomy_mapper.map_elements(elements)
+            
+            # Convert taxonomy mapping results to dictionary for JSON serialization
+            taxonomy_mappings_dict = {
+                element_id: mapping_result.to_dict() 
+                for element_id, mapping_result in taxonomy_mapping_results.items()
+            }
+            
+            # Add taxonomy mapping statistics
+            taxonomy_stats = extractor.taxonomy_mapper.get_confidence_statistics(taxonomy_mapping_results)
+            taxonomy_distribution = extractor.taxonomy_mapper.get_taxonomy_distribution(taxonomy_mapping_results)
+            
+            final_document_map['taxonomy_mapping_stats'] = taxonomy_stats
+            final_document_map['taxonomy_distribution'] = taxonomy_distribution
+            
+            # Save intermediate results if in debug mode
+            mappings_output = os.path.join(config.output_dir, 'debug', 'taxonomy_mappings.json')
+            os.makedirs(os.path.dirname(mappings_output), exist_ok=True)
+            with open(mappings_output, 'w') as f:
+                json.dump(taxonomy_mappings_dict, f, indent=2)
+                
+            print(f"  Mapped {len(taxonomy_mapping_results)} elements to standardized taxonomy")
+            print(f"  Average mapping confidence: {taxonomy_stats['avg_confidence']:.2f}")
+            print(f"  High confidence mappings: {taxonomy_stats['high_confidence_count']}")
+            
+        except Exception as e:
+            print(f"  Error mapping elements to taxonomy: {str(e)}")
+            taxonomy_mapping_results = {}
+            taxonomy_mappings_dict = {}
+            final_document_map['taxonomy_mapping_stats'] = {
+                "avg_confidence": 0,
+                "min_confidence": 0,
+                "max_confidence": 0,
+                "high_confidence_count": 0,
+                "medium_confidence_count": 0,
+                "low_confidence_count": 0
+            }
+            final_document_map['taxonomy_distribution'] = {}
+        
+        # Step 5.2: Normalize policy language
+        print("Step 5.2: Normalizing policy language...")
+        try:
+            normalized_elements = extractor.language_normalizer.normalize_elements(elements)
+            
+            # Generate normalization report
+            normalization_report = extractor.language_normalizer.generate_normalization_report(normalized_elements)
+            final_document_map['language_normalization_report'] = normalization_report
+            
+            # Save intermediate results if in debug mode
+            normalized_output = os.path.join(config.output_dir, 'debug', 'normalized_elements.json')
+            with open(normalized_output, 'w') as f:
+                json.dump(normalized_elements, f, indent=2)
+                
+            print(f"  Normalized {len(normalized_elements)} policy elements")
+            print(f"  Standardized elements: {normalization_report['standardized_count']} ({normalization_report['standardized_percentage']:.1f}%)")
+            print(f"  Unique provisions: {normalization_report['unique_count']} ({normalization_report['unique_percentage']:.1f}%)")
+            
+        except Exception as e:
+            print(f"  Error normalizing policy language: {str(e)}")
+            normalized_elements = elements
+            final_document_map['language_normalization_report'] = {
+                "total_elements": len(elements),
+                "standardized_count": 0,
+                "standardized_percentage": 0,
+                "unique_count": 0,
+                "unique_percentage": 0,
+                "average_similarity_score": 0
+            }
+        
+        # Step 5.3: Build structured policy representation
+        print("Step 5.3: Building structured policy representation...")
+        try:
+            # Extract policy metadata
+            metadata = extractor._extract_policy_metadata(elements, final_document_map.get('document_info', {}))
+            
+            # Build the structured policy representation
+            extractor.policy_structure_builder.set_policy_metadata(metadata)
+            extractor.policy_structure_builder.set_document_map(final_document_map)
+            extractor.policy_structure_builder.add_elements(elements)
+            extractor.policy_structure_builder.add_taxonomy_mappings(taxonomy_mappings_dict)
+            extractor.policy_structure_builder.add_normalized_language(normalized_elements)
+            
+            # Add relationships from Phase 4
+            if 'cross_reference_map' in final_document_map:
+                cross_ref_map = final_document_map['cross_reference_map']
+                relationships = []
+                
+                # Convert graph edges to relationships
+                for edge in cross_ref_map.get('edges', []):
+                    relationship = {
+                        "source_id": edge.get('source'),
+                        "target_id": edge.get('target'),
+                        "type": edge.get('type'),
+                        "subtype": edge.get('subtype', ''),
+                        "weight": edge.get('weight', 0)
+                    }
+                    relationships.append(relationship)
+                
+                extractor.policy_structure_builder.add_relationships(relationships)
+            
+            # Build the final policy structure
+            policy_structure = extractor.policy_structure_builder.build_structure()
+            final_document_map['standardized_policy_structure'] = policy_structure
+            
+            # Generate coverage summary
+            coverage_summary = extractor.policy_structure_builder.get_coverage_summary()
+            final_document_map['standardized_coverage_summary'] = coverage_summary
+            
+            # Save intermediate results if in debug mode
+            structure_output = os.path.join(config.output_dir, 'debug', 'policy_structure.json')
+            with open(structure_output, 'w') as f:
+                json.dump(policy_structure, f, indent=2)
+                
+            coverage_output = os.path.join(config.output_dir, 'debug', 'coverage_summary.json')
+            with open(coverage_output, 'w') as f:
+                json.dump(coverage_summary, f, indent=2)
+                
+            print(f"  Created structured representation with {policy_structure['summary']['total_elements']} elements")
+            print(f"  Mapped to {len(policy_structure['summary'].get('taxonomy_codes', {}))} taxonomy categories")
+            
+        except Exception as e:
+            print(f"  Error building structured policy representation: {str(e)}")
+            final_document_map['standardized_policy_structure'] = {"error": "Failed to build structured representation"}
+            final_document_map['standardized_coverage_summary'] = {}
+        
+        # Step 5.4: Generate taxonomy visualizations
+        print("Step 5.4: Generating taxonomy visualizations...")
+        try:
+            # Create visualizations directory
+            vis_dir = os.path.join(config.output_dir, "visualizations")
+            os.makedirs(vis_dir, exist_ok=True)
+            
+            # Generate base filename
+            base_name = os.path.basename(document_path) if document_path else "policy"
+            file_name = os.path.splitext(base_name)[0]
+            
+            # Check if we have a valid policy structure
+            if 'standardized_policy_structure' in final_document_map and 'error' not in final_document_map['standardized_policy_structure']:
+                policy_structure = final_document_map['standardized_policy_structure']
+                
+                # Generate HTML tree visualization
+                tree_path = os.path.join(vis_dir, f"{file_name}_taxonomy_tree.html")
+                extractor.taxonomy_visualizer.generate_html_tree(policy_structure, tree_path)
+                
+                # Generate coverage report
+                coverage_path = os.path.join(vis_dir, f"{file_name}_coverage_report.html")
+                extractor.taxonomy_visualizer.generate_coverage_report(policy_structure, coverage_path)
+                
+                # Generate uniqueness report
+                uniqueness_path = os.path.join(vis_dir, f"{file_name}_uniqueness_report.html")
+                extractor.taxonomy_visualizer.generate_uniqueness_report(policy_structure, uniqueness_path)
+                
+                # Generate JSON for external visualization
+                json_path = os.path.join(vis_dir, f"{file_name}_visualization_data.json")
+                extractor.taxonomy_visualizer.generate_json_visualization(policy_structure, json_path)
+                
+                # Add visualization paths to document map
+                final_document_map['taxonomy_visualizations'] = {
+                    "taxonomy_tree": tree_path,
+                    "coverage_report": coverage_path,
+                    "uniqueness_report": uniqueness_path,
+                    "visualization_data": json_path
+                }
+                
+                print(f"  Generated taxonomy visualizations in: {vis_dir}")
+                print(f"  - Taxonomy Tree: {os.path.basename(tree_path)}")
+                print(f"  - Coverage Report: {os.path.basename(coverage_path)}")
+                print(f"  - Uniqueness Report: {os.path.basename(uniqueness_path)}")
+                print(f"  - Visualization Data: {os.path.basename(json_path)}")
+                
+            else:
+                print("  Skipping visualization generation due to missing policy structure")
+                
+        except Exception as e:
+            print(f"  Error generating taxonomy visualizations: {str(e)}")
+            final_document_map['taxonomy_visualizations'] = {}
+        
+        # Save phase 5 results
+        phase5_output = os.path.join(config.output_dir, 'phase5_taxonomy_map.json')
+        with open(phase5_output, 'w') as f:
+            json.dump(final_document_map, f, indent=2)
+        
+        print(f"Phase 5 results saved to: {phase5_output}")
+        result = final_document_map
+        
+        # Save final complete results
+        final_output = os.path.join(config.output_dir, 'policy_dna_complete.json')
+        with open(final_output, 'w') as f:
+            json.dump(final_document_map, f, indent=2)
+        
+        print(f"Complete Policy DNA saved to: {final_output}")
+        
+        # Display taxonomy examples
+        display_taxonomy_examples(final_document_map)
+        
+        # Display taxonomy summary
+        print("\nPhase 5 Summary:")
+        taxonomy_stats = final_document_map.get('taxonomy_mapping_stats', {})
+        print(f"  Average mapping confidence: {taxonomy_stats.get('avg_confidence', 0):.2f}")
+        print(f"  High confidence mappings: {taxonomy_stats.get('high_confidence_count', 0)}")
+        print(f"  Medium confidence mappings: {taxonomy_stats.get('medium_confidence_count', 0)}")
+        print(f"  Low confidence mappings: {taxonomy_stats.get('low_confidence_count', 0)}")
+        
+        norm_report = final_document_map.get('language_normalization_report', {})
+        print(f"  Standardized elements: {norm_report.get('standardized_count', 0)} ({norm_report.get('standardized_percentage', 0):.1f}%)")
+        print(f"  Unique provisions: {norm_report.get('unique_count', 0)} ({norm_report.get('unique_percentage', 0):.1f}%)")
+        
+        # Display taxonomy distribution
+        taxonomy_dist = final_document_map.get('taxonomy_distribution', {})
+        if taxonomy_dist:
+            print("\nTop Taxonomy Categories:")
+            sorted_dist = sorted(taxonomy_dist.items(), key=lambda x: x[1], reverse=True)
+            for i, (code, count) in enumerate(sorted_dist[:5]):
+                print(f"  {i+1}. {code}: {count} elements")
+    
     print("\nProcessing completed successfully!")
 
 if __name__ == "__main__":
     main()
+    

@@ -67,7 +67,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Policy Number: TEST-12345",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Policy Number: TEST-12345"
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Named Insured: ABC Corporation",
@@ -135,7 +148,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Named Insured: ABC Corporation",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Named Insured: ABC Corporation"
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Policy Period: 01/01/2025 to 01/01/2026",
@@ -198,7 +224,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Policy Period: 01/01/2025 to 01/01/2026",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Policy Period: 01/01/2025 to 01/01/2026"
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Limits of Insurance: $1,000,000 Each Occurrence",
@@ -269,7 +308,20 @@
       ],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Limits of Insurance: $1,000,000 Each Occurrence",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Limits of Insurance: $1,000,000 Each Occurrence"
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
@@ -350,7 +402,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Section II \u2013 Who Is An Insured is amended to include as an additional insured the person(s) or organization(s) shown in the Schedule."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
@@ -421,7 +486,20 @@
         "or"
       ],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "We will pay those sums that the insured becomes legally obligated to pay as damages because of 'bodily injury' or 'property damage' to which this insurance applies."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
@@ -488,7 +566,20 @@
         "and"
       ],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "We will have the right and duty to defend the insured against any 'suit' seeking those damages.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "We will have the right and duty to defend the insured against any 'suit' seeking those damages."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply.",
@@ -584,7 +675,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "However, we will have no duty to defend the insured against any 'suit' seeking damages for 'bodily injury' or 'property damage' to which this insurance does not apply."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.",
@@ -673,7 +777,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Expected or Intended Injury\n\"Bodily injury\" or \"property damage\" expected or intended from the standpoint of the insured."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
@@ -763,7 +880,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Contractual Liability\n\"Bodily injury\" or \"property damage\" for which the insured is obligated to pay damages by reason of the assumption of liability in a contract or agreement."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.",
@@ -850,7 +980,20 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "\"Bodily injury\" means bodily injury, sickness or disease sustained by a person, including death resulting from any of these at any time."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured.",
@@ -937,7 +1080,22 @@
         "or"
       ],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "\"Property damage\" means:\na. Physical injury to tangible property, including all resulting loss of use of that property; or\nb. Loss of use of tangible property that is not physically injured.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "\"Property damage\" means:\na.",
+        "Physical injury to tangible property, including all resulting loss of use of that property; or\nb.",
+        "Loss of use of tangible property that is not physically injured."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.",
@@ -1005,7 +1163,20 @@
         "or"
       ],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "Bankruptcy or insolvency of the insured or of the insured's estate will not relieve us of our obligations under this policy."
+      ]
+    },
+    "similarity_score": 0.0
   },
   {
     "text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
@@ -1097,6 +1268,19 @@
       "monetary_terms": [],
       "logical_operators": [],
       "confidence": 0.9
-    }
+    },
+    "normalized_text": "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim.",
+    "normalization_source": "original",
+    "standard_clause_id": null,
+    "uniqueness_analysis": {
+      "is_unique": true,
+      "uniqueness_score": 1.0,
+      "closest_standard_clause": null,
+      "similarity_score": 0.0,
+      "unique_phrases": [
+        "You must see to it that we are notified as soon as practicable of an 'occurrence' or an offense which may result in a claim."
+      ]
+    },
+    "similarity_score": 0.0
   }
 ]

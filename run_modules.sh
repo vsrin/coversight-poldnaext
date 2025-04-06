@@ -10,7 +10,7 @@ PHASE=""
 show_help() {
     echo "Usage: $0 [options]"
     echo "Options:"
-    echo "  -p, --phase PHASE      Processing phase to run (1, 2, 3, 4, or all)"
+    echo "  -p, --phase PHASE      Processing phase to run (1, 2, 3, 4, 5, or all)"
     echo "  -i, --input FILE       Input file (document or previous phase result)"
     echo "  -o, --output DIR       Output directory (default: output)"
     echo "  -h, --help             Display this help message"
@@ -19,6 +19,7 @@ show_help() {
     echo "Phase 2: Element Extraction and Classification"
     echo "Phase 3: Deep Language Analysis"
     echo "Phase 4: Cross-Reference and Dependency Mapping"
+    echo "Phase 5: Standardization and Taxonomy Mapping"
     echo "all: Run all phases"
 }
 
@@ -51,8 +52,8 @@ done
 
 # Validate phase
 if [[ -n "$PHASE" ]]; then
-    if [[ ! "$PHASE" =~ ^[1-4]$|^all$ ]]; then
-        echo "Error: Phase must be 1, 2, 3, 4, or all"
+    if [[ ! "$PHASE" =~ ^[1-5]$|^all$ ]]; then
+        echo "Error: Phase must be 1, 2, 3, 4, 5, or all"
         exit 1
     fi
 fi

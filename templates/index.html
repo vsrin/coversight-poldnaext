@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Policy DNA Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .upload-section, .processed-files-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+        .file-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .btn-download {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-view {
+            background-color: #2196F3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Policy DNA Extractor</h1>
+    
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload New Document</h2>
+            
+            {% if error %}
+            <div class="error">
+                {{ error }}
+            </div>
+            {% endif %}
+            
+            <form method="POST" enctype="multipart/form-data">
+                <p>Upload an insurance policy document (PDF, DOCX, TXT)</p>
+                <input type="file" name="file" accept=".pdf,.docx,.txt" required>
+                <br><br>
+                <input type="submit" value="Extract Policy DNA">
+            </form>
+        </div>
+        
+        <div class="processed-files-section">
+            <h2>Processed Files</h2>
+            
+            {% if processed_files %}
+            <div class="file-list">
+                {% for file in processed_files %}
+                <div class="file-item">
+                    <span>{{ file.filename }}</span>
+                    <div class="file-actions">
+                        <a href="{{ url_for('view_file', filename=file.filename) }}" 
+                           class="btn btn-view" target="_blank">View</a>
+                        <a href="{{ url_for('download_file', filename=file.filename) }}" 
+                           class="btn btn-download">Download</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p>No processed files found.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

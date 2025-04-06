@@ -1,8 +1,8 @@
 {
   "references": [
     {
-      "source_id": "element_section_i_0_a093bc53",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_i_0_22d23c4d",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "bodily injury",
       "reference_text": "bodily injury",
@@ -14,8 +14,8 @@
       "reference_id": "REF-0001"
     },
     {
-      "source_id": "element_section_i_0_a093bc53",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_i_0_22d23c4d",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "injury",
       "reference_text": "injury",
@@ -27,8 +27,8 @@
       "reference_id": "REF-0002"
     },
     {
-      "source_id": "element_section_i_0_a093bc53",
-      "target_id": "element_section_iii_1_5b2deabf",
+      "source_id": "element_section_i_0_22d23c4d",
+      "target_id": "element_section_iii_1_09608b63",
       "reference_type": "defined_term",
       "term": "property damage",
       "reference_text": "property damage",
@@ -40,8 +40,8 @@
       "reference_id": "REF-0003"
     },
     {
-      "source_id": "element_section_i_2_40941b60",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_i_2_8b8e7a64",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "bodily injury",
       "reference_text": "bodily injury",
@@ -53,8 +53,8 @@
       "reference_id": "REF-0004"
     },
     {
-      "source_id": "element_section_i_2_40941b60",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_i_2_8b8e7a64",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "injury",
       "reference_text": "injury",
@@ -66,8 +66,8 @@
       "reference_id": "REF-0005"
     },
     {
-      "source_id": "element_section_i_2_40941b60",
-      "target_id": "element_section_iii_1_5b2deabf",
+      "source_id": "element_section_i_2_8b8e7a64",
+      "target_id": "element_section_iii_1_09608b63",
       "reference_type": "defined_term",
       "term": "property damage",
       "reference_text": "property damage",
@@ -79,8 +79,8 @@
       "reference_id": "REF-0006"
     },
     {
-      "source_id": "element_section_ii_0_05dda4fa",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_ii_0_1e3fe4aa",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "bodily injury",
       "reference_text": "Bodily injury",
@@ -92,8 +92,8 @@
       "reference_id": "REF-0007"
     },
     {
-      "source_id": "element_section_ii_0_05dda4fa",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_ii_0_1e3fe4aa",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "injury",
       "reference_text": "Injury",
@@ -105,8 +105,8 @@
       "reference_id": "REF-0008"
     },
     {
-      "source_id": "element_section_ii_0_05dda4fa",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_ii_0_1e3fe4aa",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "injury",
       "reference_text": "injury",
@@ -118,8 +118,8 @@
       "reference_id": "REF-0009"
     },
     {
-      "source_id": "element_section_ii_0_05dda4fa",
-      "target_id": "element_section_iii_1_5b2deabf",
+      "source_id": "element_section_ii_0_1e3fe4aa",
+      "target_id": "element_section_iii_1_09608b63",
       "reference_type": "defined_term",
       "term": "property damage",
       "reference_text": "property damage",
@@ -131,8 +131,8 @@
       "reference_id": "REF-0010"
     },
     {
-      "source_id": "element_section_ii_1_794b815b",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_ii_1_e823d709",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "bodily injury",
       "reference_text": "Bodily injury",
@@ -144,8 +144,8 @@
       "reference_id": "REF-0011"
     },
     {
-      "source_id": "element_section_ii_1_794b815b",
-      "target_id": "element_section_iii_0_3adaedc4",
+      "source_id": "element_section_ii_1_e823d709",
+      "target_id": "element_section_iii_0_7622e2f9",
       "reference_type": "defined_term",
       "term": "injury",
       "reference_text": "injury",
@@ -157,8 +157,8 @@
       "reference_id": "REF-0012"
     },
     {
-      "source_id": "element_section_ii_1_794b815b",
-      "target_id": "element_section_iii_1_5b2deabf",
+      "source_id": "element_section_ii_1_e823d709",
+      "target_id": "element_section_iii_1_09608b63",
       "reference_type": "defined_term",
       "term": "property damage",
       "reference_text": "property damage",
