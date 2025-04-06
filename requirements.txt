@@ -1,0 +1,14 @@
+# Document parsing libraries
+pypdf2==3.0.1
+python-docx==0.8.11
+
+# LLM client - pinned to older, compatible version
+openai==0.28.1
+
+# General utilities
+pydantic==2.0.0
+pytest==7.3.1
+uuid==1.30
+
+# Data handling
+pandas==2.0.0
